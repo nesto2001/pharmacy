@@ -13,14 +13,43 @@ html, body {
     margin:0;
 }
 
-.navbar-top > *{
-    height: 1em;
+.navbar-bottom{
+    height:49px;
 }
+
+.navbar-top > *{
+    height: 100%;
+}
+
+.navbar-bottom > * {
+    height:100%;
+}
+
 .navbar-brand {
     padding: 0;
     margin-right: 20px;
 }
 
-.searchbar{
+#search_category{
+    margin-right: 10px;
+}
 
+.user i{
+    font-size: 30px;
+    margin-right: 20px;
+    top:10px;
+}
+
+.user-account{
+    margin:0;
+    padding:0;
+}
+
+.menu{
+    height:100%;
+}
+
+#hambur i{
+    font-size: 43px;
+    font-weight: 600;
 }

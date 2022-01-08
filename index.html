@@ -6,30 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pharmacy</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/home.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="css/home.css" rel="stylesheet" />
   </head>
   <body>
     <h1 class="text-center">Hello World</h1>
+
     <div class="container page-header">
-      <div class="navbar row">
+      <div class="navbar col-xs-12 row">
         <div class="navbar-top">
-            <a class="navbar-brand col-xs-3 col-sm-3 col-md-3 col-lg-3" href="#">
-                <img src="img/logo.png" />
-            </a>
-            <div class="seachbar col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                <div class="input-group d-flex justify-content item-align-center">
-                    <input type="text" class="form-control" id="searchbarinput" placeholder="Tìm kiếm sản phẩm">
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default">Go!</button>
-                    </span>
-                </div>
-            </div>
-            <div class="user col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+          <a class="navbar-brand col-xs-3" href="#">
+            <img src="img/logo.png" />
+          </a>
+
+          <div class="searchbar col-xs-5">
+            <div class="input-group">
+
+              <input type="text" class="form-control" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
+
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle col" data-toggle="dropdown">
+                  <span id="search_category">Phân loại sản phẩm</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#duocpham">Dược phẩm</a></li>
+                  <li><a href="#tbiyte">Thiết bị y tế</a></li>
+                  <li><a href="#mypham">Mỹ phẩm</a></li>
+                  <li><a href="#dcuyte">Dụng cụ y tế </a></li>
+                  <li><a href="#tpchucnang">TP chức năng</a></li>
+                  <li><a href="#tptreem">TP cho trẻ em</a></li>
+                </ul>
+              </div>
+
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+              </span>
 
             </div>
+
+          </div>
+
+          <div class="user col-xs-4 row">
+            <i class="bx bx-heart col-xs-1"></i>
+            <i class="bx bx-cart col-xs-1"></i>
+            <span class="user-account col-xs-8 row">
+              <i class="bx bx-user col-xs-1"></i>
+              <span class="user-action col-xs-10 row">
+                <span class="action-desc col-xs-12">
+                  My Account
+                </span>
+                <span class="action-btn col-xs-12">
+                  Đăng nhập/Đăng ký
+                </span>
+              </span>
+            </span>
+          </div>
+
         </div>
-        
+
+
+        <div class="navbar-bottom">
+          <div class="menu-category">
+            <div class="menu">
+              <button class="navbar-toggler" id="hambur" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
         </div>
+
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
