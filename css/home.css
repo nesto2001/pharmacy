@@ -6,6 +6,7 @@ html, body {
 .page-header{
     height: 134px;
     padding: 0;
+    border: 0;
 }
 
 .navbar-top{
@@ -14,7 +15,7 @@ html, body {
 }
 
 .navbar-bottom{
-    height:49px;
+    
 }
 
 .navbar-top > *{
@@ -45,11 +46,30 @@ html, body {
     padding:0;
 }
 
+.user-action{
+    height:30px;
+}
+
 .menu{
     height:100%;
 }
 
+#hambur {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: black;
+}
+
+#hambur button{
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+}
+
 #hambur i{
-    font-size: 43px;
+    font-size: 30px;
     font-weight: 600;
+    color: white;
 }

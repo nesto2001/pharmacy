@@ -5,23 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pharmacy</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="css/home.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 class="text-center">Hello World</h1>
 
     <div class="container page-header">
-      <div class="navbar col-xs-12 row">
-        <div class="navbar-top">
+      <div class="navbar">
+        <div class="navbar-top col-12 row">
 
-          <a class="navbar-brand col-xs-3" href="#">
+          <a class="navbar-brand col-3" href="#">
             <img src="img/logo.png" />
           </a>
 
-          <div class="searchbar col-xs-5">
+          <div class="searchbar col-5">
             <div class="input-group">
 
               <input type="text" class="form-control" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
@@ -42,23 +41,23 @@
               </div>
 
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
               </span>
 
             </div>
 
           </div>
 
-          <div class="user col-xs-4 row">
-            <i class="bx bx-heart col-xs-1"></i>
-            <i class="bx bx-cart col-xs-1"></i>
-            <span class="user-account col-xs-8 row">
-              <i class="bx bx-user col-xs-1"></i>
-              <span class="user-action col-xs-10 row">
-                <span class="action-desc col-xs-12">
+          <div class="user col-4 row">
+            <i class="bx bx-heart col-1 m-0 p-0"></i>
+            <i class="bx bx-cart col-1"></i>
+            <span class="user-account col m-0 p-0 row">
+              <i class="bx bx-user col-1"></i>
+              <span class="user-action col row p-0 m-0">
+                <span class="action-desc col-12">
                   My Account
                 </span>
-                <span class="action-btn col-xs-12">
+                <span class="action-btn col-12">
                   Đăng nhập/Đăng ký
                 </span>
               </span>
@@ -68,20 +67,23 @@
         </div>
 
 
-        <div class="navbar-bottom">
-          <div class="menu-category">
-            <div class="menu">
-              <button class="navbar-toggler" id="hambur" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar-bottom col-12 row">
+          <div class="menu-category col-4">
+            <div class="menu" id="hambur">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
               </button>
             </div>
           </div>
+
+          <div class="col-8"></div>
         </div>
 
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
