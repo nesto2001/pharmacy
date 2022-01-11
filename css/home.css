@@ -12,10 +12,7 @@ html, body {
 .navbar-top{
     height:85px;
     margin:0;
-}
-
-.navbar-bottom{
-    
+    margin-left: 15px;
 }
 
 .navbar-top > *{
@@ -24,6 +21,14 @@ html, body {
 
 .navbar-bottom > * {
     height:100%;
+}
+
+.navbar-bottom{
+    padding:0;
+    margin: 0;
+    border: solid;
+    border-width: 1px 0px 1px 0px;
+    border-image: repeating-linear-gradient(to left, rgba(99, 130, 240,.2), rgba(99, 130, 240,.6), rgba(99, 130, 240,.8)) 1;
 }
 
 .navbar-brand {
@@ -35,19 +40,42 @@ html, body {
     margin-right: 10px;
 }
 
+.icon{
+    height: 100%;
+    margin:0;
+    padding:0;
+    vertical-align: middle;
+}
+
 .user i{
     font-size: 30px;
+    margin:0;
+    padding: 0;
     margin-right: 20px;
     top:10px;
+    height: 30px;
 }
 
 .user-account{
     margin:0;
     padding:0;
+    height: 100%;
+}
+
+.user > *{
+    margin:0px 10px 0px 10px;
 }
 
 .user-action{
-    height:30px;
+    height:100%;
+}
+
+.action-desc{
+    padding-top: 10px;
+}
+
+.action-btn{
+    padding-bottom: 22px;
 }
 
 .menu{
@@ -72,4 +100,252 @@ html, body {
     font-size: 30px;
     font-weight: 600;
     color: white;
+}
+
+.category-ctl{
+    text-align: center;
+    vertical-align: middle;
+    background-color: #42549A;
+    color: white;
+    width: 234.5px;
+}
+
+.nav-link {
+    width:100%;
+    
+}
+
+.nav-link ul{
+    height:100%;
+    list-style: none;
+}
+
+.link {
+    color: black;
+}
+
+.link:hover{
+    text-decoration: none;
+}
+
+#active {
+    color: #42549A;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #42549A;
+}
+
+.bannerqc{
+    margin-left: 30px;
+    width: 98%;
+}
+
+.banner-title{
+    color: #42549A;
+    font-weight: 700;
+    width: 500px;
+    padding-top: 40px;
+    font-size: 30px;
+    z-index: 1;
+    margin-bottom: 40px;
+}
+
+.covid{
+    font-size: 70px;
+    color: #EA5F5F;
+    height: 85px;
+}
+
+.banner-btn{
+    position: absolute;
+    border: 0;
+    padding: 10px 25px;
+    border-radius: 19px;
+    color: white;
+    background-color: #42549A;
+}
+
+.plus{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    z-index: 10;
+    margin:0;
+    display: inline-block;
+}
+
+.plus > * {
+    position: absolute;
+}
+
+.x-line{
+    border-radius: 24px;
+    width: 70%;
+    height: 15%;
+    left: 12.5%;
+    top: 40%;
+    z-index: 2;
+    background-color: #42549A;
+}
+.y-line{
+    border-radius: 24px;
+    width: 15%;
+    height: 70%;
+    left: 40%;
+    top: 12.5%;
+    background-color: #42549A;
+    z-index: 3;
+}
+
+.small{
+    width: 50px;
+    height: 50px;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: #42549A;
+    position: absolute;
+    z-index: -1;
+    top:150px;
+    left: 50px;
+}
+
+.virus,.banner-pdt{
+    position: absolute;
+    z-index: 1;
+}
+
+.virus{
+    width: 50px;
+}
+
+.banner-pdt{
+    width: 16%;
+}
+
+.divider{
+    height: 2px;
+    background-image: repeating-linear-gradient(to left, rgba(99, 130, 240,.2), rgba(99, 130, 240,.6), rgba(99, 130, 240,.2));
+}
+
+.feature{
+    height:210px;
+}
+
+.ft-text{
+    height: 50px;
+    padding-top: 5px;
+}
+
+.ft-text p:first-child{
+    font-weight: 600;
+    height: 20px;
+    font-size: 15px;
+}
+
+.ft-text p{
+    margin:0;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.statistics{
+    height: 139px;
+    background: rgba(66, 84, 154, 0.95);
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.statistics > * {
+    height: 100%;
+}
+
+.stat-type{
+    margin:0;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.subscription{
+    height:100px;
+    background: #42549A;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.subscription >*{
+    height:100%;
+}
+
+.vertical-divider{
+    width: 1px;
+    height:40%;
+    background-color: white;
+}
+
+.email-sub{
+    width: 40%;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 45px;
+    border-right-style: none;
+}
+
+.email-input{
+    color: white;
+    background: 
+      linear-gradient(#fff, #fff) center bottom 5px /calc(100% - 60px) 1px no-repeat;
+    background-color: transparent;
+    padding: 7px;
+    border:none;
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.email-input::placeholder{
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.email-input:focus{
+    color: white;
+    border:none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 7px;
+    padding-left: 30px;
+    background-color: transparent;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.email-btn {
+    padding: 0px 30px 0px 30px;
+    height: 68px;
+    border: 1px solid white;
+    color: #42549A;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 0px 40px 40px 0px;
+}
+
+footer{
+    height: 422px;
+    background-image: url("../img/footerimg.png");
+    background-size: cover;
 }

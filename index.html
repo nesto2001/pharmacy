@@ -13,14 +13,14 @@
   <body>
 
     <div class="container page-header">
-      <div class="navbar">
-        <div class="navbar-top col-12 row">
+      <div class="navbar p-0">
+        <div class="navbar-top col-12 row p-0 m-0">
 
           <a class="navbar-brand col-3" href="#">
             <img src="img/logo.png" />
           </a>
 
-          <div class="searchbar col-5">
+          <div class="searchbar d-flex align-items-center col-5">
             <div class="input-group">
 
               <input type="text" class="form-control" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
@@ -49,48 +49,160 @@
           </div>
 
           <div class="user col-4 row">
-            <i class="bx bx-heart col-1 m-0 p-0"></i>
-            <i class="bx bx-cart col-1"></i>
-            <span class="user-account col m-0 p-0 row">
-              <i class="bx bx-user col-1"></i>
-              <span class="user-action col row p-0 m-0">
-                <span class="action-desc col-12">
+            <div class="icon col-1 d-flex align-items-center"><i class="bx bx-heart"></i></div>
+            <div class="icon col-1 d-flex align-items-center"><i class="bx bx-cart"></i></div>
+            <div class="user-account col-7 row align-items-center">
+              <div class="icon col-1 d-flex align-items-center mr-2"><i class="bx bx-user"></i></div>
+              <div class="user-action col row p-0 m-0">
+                <div class="action-desc col-12">
                   My Account
-                </span>
-                <span class="action-btn col-12">
+                </div>
+                <div class="action-btn col-12">
                   Đăng nhập/Đăng ký
-                </span>
-              </span>
-            </span>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
 
-
-        <div class="navbar-bottom col-12 row">
-          <div class="menu-category col-4">
-            <div class="menu" id="hambur">
+        <div class="navbar-bottom col-12 row p-0">
+          <div class="menu-category input-group col-3 p-0">
+            <div class="menu input-group-btn" id="hambur">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
               </button>
             </div>
+            <div class="category-ctl input-group-btn col-auto d-flex align-items-center pr-0">
+              <div class="mr-4">Danh Mục Sản Phẩm</div>
+              <i class="fas fa-angle-down ml-4"></i>
+            </div>
           </div>
 
-          <div class="col-8"></div>
+          <div class="nav-link col-8 p-0 m-0">
+            <ul class="cow-12 m-0 p-0 d-flex align-items-center" style="height:50px;">
+              <li class="col-auto"><a href="#" class="link" id="active">Trang Chủ</a></li>
+              <li class="col-auto"><a href="#" class="link">Hoạt Chất</a></li>
+              <li class="col-auto"><a href="#" class="link">Tìm Hiểu Bệnh</a></li>
+              <li class="col-auto"><a href="#" class="link">Về Chúng Tôi</a></li>
+              <li class="col-auto"><a href="#" class="link">Tin Tức</a></li>
+              <li class="col-auto"><a href="order.html" class="link">Đặt Hàng Nhanh</a></li>
+              <li class="col-auto"><a href="contact.html" class="link">Liên Hệ</a></li>
+            </ul>
+          </div>
         </div>
 
       </div>
     </div>
     
-    <div class="banner">
-    
+    <div class="container banner d-flex p-0">
+      <div class="banner-desc col-2 p-0">
+        <div class="banner-title"><p class="m-0">HỖ TRỢ, PHÒNG CHỐNG</p><p class="covid m-0">COVID 19</p><p>CÙNG CHỢ THUỐC SỈ</p></div>
+        <input class="banner-btn" type="button" value="KHÁM PHÁ THÊM">
+        <div class="plus" style="bottom:260px; left:45px;">
+          <div class="x-line"></div>
+          <div class="y-line"></div>
+        </div>
+        <div class="plus small" style="bottom:230px; left:95px;">
+          <div class="x-line"></div>
+          <div class="y-line"></div>
+        </div>
+        <div class="plus small" style="bottom:210px; left:56px;">
+          <div class="x-line"></div>
+          <div class="y-line"></div>
+        </div>
+        <div class="plus" style="bottom:160px; left:10px;">
+          <div class="x-line"></div>
+          <div class="y-line"></div>
+        </div>
+        <div class="plus" style="bottom:138px; left:60px;">
+          <div class="x-line"></div>
+          <div class="y-line"></div>
+        </div>
+        <div class="plus small" style="bottom:115px; left:30px;">
+          <div class="x-line"></div>
+          <div class="y-line"></div>
+        </div>
+        <div class="plus" style="bottom:85px; left:80px;">
+          <div class="x-line"></div>
+          <div class="y-line"></div>
+        </div>
+        <div class="plus small" style="bottom:60px; left:55px;">
+          <div class="x-line"></div>
+          <div class="y-line"></div>
+        </div>
+        <div class="plus" style="bottom:10px; left:25px;">
+          <div class="x-line"></div>
+          <div class="y-line"></div>
+        </div>
+      </div>
+      <div class="col-1"></div>
+      <div class="banner-img col-9 ml-4 pr-0">
+        <div class="circle"></div>
+        <img class="virus" src="img/virus.png" alt="virus" style="top: 270px; left: 38px">
+        <img class="virus" src="img/virus.png" alt="virus" style="top:132px; left:190px">
+        <img class="banner-pdt" src="img/ruatay.png" alt="nuoc rua tay" style="top: 155px; left:85px">
+        <img class="bannerqc" src="img/banner.png" alt="quangcao">
+      </div>
     </div>
 
-    <div class="container feature">
-      
+    <div class="divider"></div>
+
+    <div class="container feature p-0">
+      <div class="feature-des d-flex justify-content-center row m-0">
+        <div class="feature-content my-4 mx-2 col p-0 d-flex">
+          <img src="img/heartbeat.png" alt="">
+          <div class="ft-text">
+            <p>Sản Phẩm An Toàn</p>
+            <p>Phù hợp với mọi bệnh lý</p>
+          </div>
+        </div>
+        <div class="feature-content my-4 mx-2 col p-0 d-flex">
+          <img src="img/CreditCard.png" alt="">
+          <div class="ft-text">
+            <p>Phương Thức Thanh Toán</p>
+            <p>Bảo mật & an toàn</p>
+          </div>
+        </div>
+        <div class="feature-content my-4 mx-2 col p-0 d-flex">
+          <img src="img/Truck.png" alt="">
+          <div class="ft-text">
+            <p>Vận Chuyển Nhanh</p>
+            <p>Vận chuyển, an toàn & tin cậy</p>
+          </div>
+        </div>
+        <div class="feature-content my-4 mx-2 col p-0 d-flex">
+          <img src="img/Group 3.png" alt="">
+          <div class="ft-text">
+            <p>Cập Nhật Tin Tức</p>
+            <p>Cập nhật tin tức, sản phẩm mới</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-des d-flex justify-content-center row m-0">
+        <div class="feature-content my-4 mx-2 col p-0 d-flex"></div>
+        <div class="feature-content my-4 mx-2 col p-0 d-flex">
+          <div style="width:74px; text-align:center;"><img src="img/ShieldCheck.png" alt=""></div>
+          <div class="ft-text">
+            <p>Bảo Vệ Người Dùng</p>
+            <p>Bảo vệ thông tin người dùng</p>
+          </div>
+        </div>
+        <div class="feature-content my-4 mx-2 col p-0 d-flex">
+          <div style="width:74px; text-align:center;"><img src="img/support.png" alt=""  style="height: 50px;"></div>
+          <div class="ft-text">
+            <p>Đội Ngũ Chuyên Nghiệp</p>
+            <p>Tư vấn miễn phí, hỗ trợ 24/7</p>
+          </div>
+        </div>
+        <div class="feature-content my-4 mx-2 col p-0 d-flex"></div>
+      </div>
+      <div class="divider"></div>
     </div>
 
     <div class="container category-ft">
+      Danh Mục Nổi Bật
       <div class="category-ft-card"></div> <!-- dược phẩm -->
       <div class="category-ft-card"></div> <!-- thiết bị y tế -->
       <div class="category-ft-card"></div> <!-- mỹ phẩm --> 
@@ -117,10 +229,12 @@
     </div>
 
     <div class="statistics">
-      <div class="stat-content" id="numofmed"></div>
-      <div class="stat-content" id="supplier"></div>
-      <div class="stat-content" id="customer"></div>
-      <div class="stat-content" id="degree"></div>
+      <div class="container d-flex justify-content-center align-items-center p-0">
+        <div class="stat-content col" id="numofmed">1118<p class="stat-type">Loại thuốc</p></div>
+        <div class="stat-content col" id="supplier">69<p class="stat-type">Nhà phân phối</p></div>
+        <div class="stat-content col" id="customer">6900<p class="stat-type">Khách hàng tin tưởng</p></div>
+        <div class="stat-content col" id="degree">10<p class="stat-type">Bằng chứng nhận</p></div>
+      </div>
     </div>
 
     <div class="container monthly-promo">
@@ -158,9 +272,16 @@
     </div>
 
     <div class="subscription">
-      ĐĂNG KÝ ĐỂ NHẬN NGAY NHỮNG ƯU ĐÃI VÀ THÔNG TIN MỚI NHẤT TỪ CHÚNG TÔI
-      <div class="divider"></div>
-      <div class="email-sub"></div>
+      <div class="container d-flex justify-content-center align-items-center">
+        ĐĂNG KÝ ĐỂ NHẬN NGAY NHỮNG ƯU ĐÃI VÀ THÔNG TIN MỚI NHẤT TỪ CHÚNG TÔI
+        <div class="vertical-divider mx-5"></div>
+        <div class="email-sub input-group d-flex align-items-center">
+          <input type="email" name="" id="input" class="form-control email-input" value="" placeholder="Email Address">
+          <span class="input-group-btn">
+            <button class="email-btn" type="button" class="btn btn-default">ĐĂNG KÝ</button>
+          </span>
+        </div>
+      </div>
     </div>
 
     <footer>
