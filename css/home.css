@@ -235,7 +235,7 @@ html, body {
 }
 
 .feature{
-    height:210px;
+    height:196px;
 }
 
 .ft-text{
@@ -348,4 +348,94 @@ footer{
     height: 422px;
     background-image: url("../img/footerimg.png");
     background-size: cover;
+}
+
+.title{
+    font-size: 20px;
+    margin: 40px 0px 40px 0px;
+}
+
+.category-ft{
+    margin-bottom: 40px;
+}
+
+.category-ft-card{
+    height:300px;
+    margin: 0px 10px;
+    padding: 0;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.thumb-wrapper{
+    height: 85%;
+}
+
+.category-tn{
+    width: 90%;
+    display: block;
+}
+
+.category-ft-card:first-child{
+    margin-left: 0px;
+}
+
+.category-ft-card:last-child{
+    margin-right: 0px;
+}
+
+.category-slider {
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.slider-title{
+    text-align: center;
+    margin:0;
+    margin-bottom: 30px;
+}
+
+.category-icon{
+    vertical-align: middle;
+}
+
+.category-card{
+    height: 320px;
+    background-color: #42549A;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 120px;
+}
+
+.control{
+    margin-top: 60px;
+    height: 320px;
+    display: table;
+}
+
+.ctrl {
+    border: 1px solid #C8C8C8;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;
+    font-size: x-large;
+    color: #898989;
+    cursor: pointer;
+}
+.product-slider-page{
+    padding: 0;
+    padding-top: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product-card{
+    height: 320px;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 120px;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
 }
