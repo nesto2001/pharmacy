@@ -2,6 +2,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
+:root{
+    --major-color: #42549A;
+}
 
 .page-header{
     height: 134px;
@@ -105,7 +108,7 @@ html, body {
 .category-ctl{
     text-align: center;
     vertical-align: middle;
-    background-color: #42549A;
+    background-color: var(--major-color);
     color: white;
     width: 234.5px;
 }
@@ -129,13 +132,13 @@ html, body {
 }
 
 #active {
-    color: #42549A;
+    color: var(--major-color);
 }
 
 .line {
     width: 100%;
     height: 1px;
-    background-color: #42549A;
+    background-color: var(--major-color);
 }
 
 .bannerqc{
@@ -144,7 +147,7 @@ html, body {
 }
 
 .banner-title{
-    color: #42549A;
+    color: var(--major-color);
     font-weight: 700;
     width: 500px;
     padding-top: 40px;
@@ -165,7 +168,7 @@ html, body {
     padding: 10px 25px;
     border-radius: 19px;
     color: white;
-    background-color: #42549A;
+    background-color: var(--major-color);
 }
 
 .plus{
@@ -188,7 +191,7 @@ html, body {
     left: 12.5%;
     top: 40%;
     z-index: 2;
-    background-color: #42549A;
+    background-color: var(--major-color);
 }
 .y-line{
     border-radius: 24px;
@@ -196,7 +199,7 @@ html, body {
     height: 70%;
     left: 40%;
     top: 12.5%;
-    background-color: #42549A;
+    background-color: var(--major-color);
     z-index: 3;
 }
 
@@ -209,7 +212,7 @@ html, body {
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    background-color: #42549A;
+    background-color: var(--major-color);
     position: absolute;
     z-index: -1;
     top:150px;
@@ -277,7 +280,7 @@ html, body {
 
 .subscription{
     height:100px;
-    background: #42549A;
+    background: var(--major-color);
     color: white;
     font-size: 14px;
     font-weight: 300;
@@ -338,17 +341,12 @@ html, body {
     padding: 0px 30px 0px 30px;
     height: 68px;
     border: 1px solid white;
-    color: #42549A;
+    color: var(--major-color);
     font-size: 16px;
     font-weight: 700;
     border-radius: 0px 40px 40px 0px;
 }
 
-footer{
-    height: 422px;
-    background-image: url("../img/footerimg.png");
-    background-size: cover;
-}
 
 .title{
     font-size: 20px;
@@ -404,7 +402,7 @@ footer{
 
 .category-card{
     height: 320px;
-    background-color: #42549A;
+    background-color: var(--major-color);
     border-radius: 16px;
     text-align: center;
     font-size: 120px;
@@ -446,7 +444,7 @@ footer{
 
 .product-slider-paging{
     font-size: 36px;
-    color: #42549A;
+    color: var(--major-color);
     margin: 40px 0px;
 }
 
@@ -462,7 +460,7 @@ footer{
 .promo {
     margin:0;
     margin-top: 40px;
-    border: 2.5px solid #42549A;
+    border: 2.5px solid var(--major-color);
     border-radius: 19px;
     padding-top: 30px;
     padding-left: 50px;
@@ -499,7 +497,7 @@ footer{
     padding: 10px;
     width: 42px;
     height: 42px;
-    background-color: #42549A;
+    background-color: var(--major-color);
     margin-bottom: 20px;
 }
 
@@ -516,7 +514,7 @@ footer{
     padding: 10px 25px;
     border-radius: 19px;
     color: white;
-    background-color: #42549A;
+    background-color: var(--major-color);
 }
 
 .promo-slider > *{
@@ -557,7 +555,7 @@ footer{
 .promo-card-price{
     margin-top: 4px;
     font-weight: 600;
-    color: #42549A;
+    color: var(--major-color);
 }
 
 .news-ratings{
@@ -587,7 +585,7 @@ footer{
 
 .article-date{
     font-size: 16px;
-    color: #42549A;
+    color: var(--major-color);
 }
 
 .article-title{
@@ -599,7 +597,7 @@ footer{
 
 .article-divider{
     height: 1px;
-    background-color: #42549A;
+    background-color: var(--major-color);
 }
 
 .article:last-child{
@@ -614,7 +612,7 @@ footer{
 .review-content{
     padding: 20px;
     border-radius: 18px;
-    border: 1px solid #42549A;
+    border: 1px solid var(--major-color);
 }
 
 .review-more{
@@ -637,4 +635,90 @@ footer{
 
 .rv-ctrl:last-of-type{
     margin-right: 0;
+}
+
+footer{
+    height: 422px;
+    background-image: url("../img/footerimg.png");
+    background-size: cover;
+}
+
+footer .container {
+    padding-top: 40px;
+}
+
+.footer-info > *{
+    display: block;
+    float: left;
+}
+
+.footer-logo{
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--major-color);
+}
+
+
+.footer-col-title{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.footer-contact, .footer-pp, .footer-paymethod{
+    margin: 40px;
+    margin-top: 0;
+}
+
+.footer-info div:first-child{
+    margin-left: 0;
+}
+
+.footer-info div:last-child{
+    margin-right: 0;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+    max-width: 200px;
+    font-size: 18px;
+}
+
+footer ul li{
+    margin: 10px 0px;
+}
+
+.action-clipboard{
+    font-weight: 600;
+    color: var(--major-color);
+}
+
+.methods{
+    margin-top: 20px;
+    max-width: 250px;
+}
+
+.method{
+    background: #ffffff;
+    width: 95px;
+    height: 68px;
+    border: 1px solid #F3F3F3;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    filter: drop-shadow(-2px 0px 9px rgba(0, 0, 0, 0.2));
+}
+
+.methods div:first-child{
+    margin-left: 0;
+}
+
+.methods div:nth-child(3){
+    margin-left: 0;
+}
+
+.method img{
+    width: 60%;
 }

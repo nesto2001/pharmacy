@@ -26,18 +26,27 @@
               <input type="text" class="form-control" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
 
               <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle col" data-toggle="dropdown">
+                <!-- <button type="button" class="btn btn-default dropdown-toggle col" data-toggle="dropdown">
                   <span id="search_category">Phân loại sản phẩm</span>
                   <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
+                </button> -->
+                <select class="input-group btn btn-default dropdown-toggle form-control">
+                  <option value="" selected hidden>Phân loại sản phẩm</option>
+                  <option value="1">Dược phẩm</option>
+                  <option value="2">Thiết bị y tế</option>
+                  <option value="3">Mỹ phẩm</option>
+                  <option value="4">Dụng cụ y tế</option>
+                  <option value="5">TP chức năng</option>
+                  <option value="6">TP cho trẻ em</option>
+                </select>
+                <!-- <ul class="dropdown-menu" role="menu">
                   <li><a href="#duocpham">Dược phẩm</a></li>
                   <li><a href="#tbiyte">Thiết bị y tế</a></li>
                   <li><a href="#mypham">Mỹ phẩm</a></li>
                   <li><a href="#dcuyte">Dụng cụ y tế </a></li>
                   <li><a href="#tpchucnang">TP chức năng</a></li>
                   <li><a href="#tptreem">TP cho trẻ em</a></li>
-                </ul>
+                </ul> -->
               </div>
 
               <span class="input-group-btn">
@@ -396,7 +405,7 @@
     </div>
 
     <div class="container monthly-promo">
-      Khuyến mãi trong tháng
+      <span style="font-size: 20px;">Khuyến Mãi Trong Tháng</span>
       <div class="promo row">
         <div class="promo-info col-3">
           <div class="sale-info">
@@ -535,10 +544,55 @@
 
     <footer>
       <div class="container">
-        <div class="footer-logo"></div>
-        <div class="footer-contact"></div>
-        <div class="footer-pp"></div>
-        <div class="footer-paymethod"></div>
+        <div class="footer-content row m-0">
+          <div class="footer-logo col-3 p-0">
+            <div class="logo-wrapper">
+              <img src="img/logonotext.png" alt="">
+            </div>
+            THUỐC CHỢ SỈ
+          </div>
+          <div class="footer-info col-9 p-0">
+            <div class="footer-contact">
+              <div class="footer-col-title">Thông tin liên hệ</div>
+              <ul id="contact">
+                <li class="action-clipboard">0909 669 420</li>
+                <li class="action-clipboard">Thuocchosi@gmail.com</li>
+                <li>Về chúng tôi</li>
+                <li>Công Ty TNHH Thương Mại XYZ</li>
+                <li>Địa chỉ: 48 Nguyễn Văn Quá, phường 3, Quận Gò Vấp, Tp HCM.</li>
+              </ul>
+            </div>
+            <div class="footer-pp">
+              <div class="footer-col-title">Chính sách và bảo mật</div>
+              <ul id="contact">
+                <li>FAQS</li>
+                <li>Điều khoản sử dụng</li>
+                <li>Chính sách giao hàng</li>
+                <li>Chính sách hoàn trả</li>
+                <li>Chính sách bảo mật</li>
+                <li>Chính sách người dùng</li>
+                <li>Theo dõi đơn hàng</li>
+              </ul>
+            </div>
+            <div class="footer-paymethod">
+              <div class="footer-col-title">Phương thức thanh toán</div>
+              <div class="methods d-flex flex-wrap">
+                <div id="visa" class="method d-flex justify-content-center align-items-center">
+                  <img src="img/visa.png" alt="visa">
+                </div>
+                <div id="mastercard" class="method d-flex justify-content-center align-items-center">
+                  <img src="img/mastercard.png" alt="mastercard">
+                </div>
+                <div id="gpay" class="method d-flex justify-content-center align-items-center">
+                  <img src="img/gpay.png" alt="gpay">
+                </div>
+                <div id="paypal" class="method d-flex justify-content-center align-items-center">
+                  <img src="img/paypal.png" alt="paypal">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
