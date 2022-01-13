@@ -413,7 +413,6 @@ footer{
 .control{
     margin-top: 60px;
     height: 320px;
-    display: table;
 }
 
 .ctrl {
@@ -438,4 +437,204 @@ footer{
     text-align: center;
     font-size: 120px;
     box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.product-slider-divider{
+    height: 2px;
+    margin: 40px 0px;
+}
+
+.product-slider-paging{
+    font-size: 36px;
+    color: #42549A;
+    margin: 40px 0px;
+}
+
+.product-slider-paging i{
+    margin: 0px 120px;
+    cursor: pointer;
+}
+
+.monthly-promo{
+    margin-top: 50px;
+}
+
+.promo {
+    margin:0;
+    margin-top: 40px;
+    border: 2.5px solid #42549A;
+    border-radius: 19px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 18px;
+}
+
+.promo-info{
+    margin: 0;
+    padding: 0;
+}
+
+.sale-info{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+#percent{
+    color: #EA5F5F;
+}
+
+.timer-content{
+    padding: 0px;
+    margin: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.timer-box{
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 42px;
+    height: 42px;
+    background-color: #42549A;
+    margin-bottom: 20px;
+}
+
+.timer-content:first-of-type{
+    margin-left:0;
+}
+
+.promo-timer{
+    margin-bottom: 10px;
+}
+
+.promo-button{
+    border: 0;
+    padding: 10px 25px;
+    border-radius: 19px;
+    color: white;
+    background-color: #42549A;
+}
+
+.promo-slider > *{
+    padding: 5px;
+}
+
+.promo-ctrl{
+    height: 40px !important;
+    width: 40px !important; 
+    
+}
+
+.promo-control{
+    position: absolute;
+    top:41%;
+}
+
+.promo-card{
+    font-size: 16px;
+}
+
+.promo-card-thumb{
+    height: 205px;
+}
+
+.promo-card-thumb img{
+    width: 100%;
+}
+
+.promo-card-info{
+    margin-top: 10px;
+}
+
+.promo-card-rating{
+    margin-top: 15px;
+}
+
+.promo-card-price{
+    margin-top: 4px;
+    font-weight: 600;
+    color: #42549A;
+}
+
+.news-ratings{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.news,.ratings{
+    padding: 0;
+    font-size: 24px;
+}
+
+.article {
+    margin: 10px 0px 20px 0px;
+}
+
+.article-thumb{
+    width: 180px;
+    height: 124px;
+    border-radius: 18px;
+    background-size: cover;
+}
+
+.article-content{
+    margin-left: 20px;
+}
+
+.article-date{
+    font-size: 16px;
+    color: #42549A;
+}
+
+.article-title{
+    font-size: 20px;
+    word-wrap:break-word;
+    overflow:hidden;
+    max-width: 304px;
+}
+
+.article-divider{
+    height: 1px;
+    background-color: #42549A;
+}
+
+.article:last-child{
+    margin-bottom: 0;
+}
+
+.review{
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.review-content{
+    padding: 20px;
+    border-radius: 18px;
+    border: 1px solid #42549A;
+}
+
+.review-more{
+    margin-top: 30px;
+}
+
+.reviewer {
+    width: 84px;
+    height: 84px;
+    border-radius: 40px;
+    background: red;
+}
+
+.rv-ctrl{
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0px 20px;
+    font-size: medium !important;
+}
+
+.rv-ctrl:last-of-type{
+    margin-right: 0;
 }
