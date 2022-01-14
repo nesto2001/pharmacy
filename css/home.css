@@ -408,6 +408,19 @@ html, body {
     font-size: 120px;
 }
 
+.product-slider-card {
+    padding: 0px 10px;
+}
+
+.product-slider div:first-child{
+    padding-left: 0;
+}
+
+.product-slider div:last-child{
+    padding-right: 0;
+}
+
+
 .control{
     margin-top: 60px;
     height: 320px;
@@ -432,9 +445,36 @@ html, body {
 .product-card{
     height: 320px;
     border-radius: 16px;
-    text-align: center;
-    font-size: 120px;
+    text-align: left;
+    font-size: 16px;
     box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.product-divider {
+    border: 1px solid rgba(197, 197, 197, 0.55);
+}
+
+.product-details{
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.product-image img{
+    width: 80%;
+}
+
+.product-price{
+    color: var(--major-color);
+}
+
+.product-link{
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    color: white;
+    font-size: 20px;
+    background-color: var(--major-color);
+    border-radius: 5px;
 }
 
 .product-slider-divider{
@@ -722,3 +762,4 @@ footer ul li{
 .method img{
     width: 60%;
 }
+
