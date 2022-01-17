@@ -80,7 +80,7 @@
   
             <div class="nav-link col-8 p-0 m-0">
               <ul class="cow-12 m-0 p-0 d-flex align-items-center" style="height:50px;">
-                <li class="col-auto"><a href="#" class="link" id="active">Trang Chủ</a></li>
+                <li class="col-auto"><a href="index.html" class="link">Trang Chủ</a></li>
                 <li class="col-auto"><a href="#" class="link">Hoạt Chất</a></li>
                 <li class="col-auto"><a href="#" class="link">Tìm Hiểu Bệnh</a></li>
                 <li class="col-auto"><a href="#" class="link">Về Chúng Tôi</a></li>
@@ -105,157 +105,348 @@
 
     <div class="container product-wrapper p-0">
       <div class="product-details row m-0">
-        <div class="product-images">
-          <div class="product-image active-image d-flex align-items-center">
+        <div class="product-dt-images">
+          <div class="product-dt-image active-image d-flex align-items-center">
             <img src="img/pabamox.png" alt="">
           </div>
-          <div class="product-image d-flex align-items-center">
+          <div class="product-dt-image d-flex align-items-center">
             <img src="img/pabamox.png" alt="">
           </div>
-          <div class="product-image d-flex align-items-center">
+          <div class="product-dt-image d-flex align-items-center">
             <img src="img/pabamox.png" alt="">
           </div>
-          <div class="product-image d-flex align-items-center">
+          <div class="product-dt-image d-flex align-items-center">
             <img src="img/pabamox.png" alt="">
           </div>
         </div>
         <div class="product-thumb d-flex align-items-center"><img src="img/pabamox.png" alt=""></div>
         <div class="product-info">
           <div class="product-info-tabs d-flex">
-            <div class="product-info-tab tab-title">Thông tin sản phẩm</div>
-            <div class="product-info-tab tab-title">Chi tiết sản phẩm</div>
-          </div>
-          <div class="product-category">Dược phẩm</div>
-          <div class="product-name">Fabamox 500mg</div>
-          <div class="product-price">46.000 VNĐ</div>
-          <div class="product-status"><i class="fas fa-check"></i> Còn hàng</div>
-          <div class="product-quantity col-4 p-0">
-            <div class="product-quantity-input input-group">
-              <div class="input-group-prepend">
-                <button class="btn btn-outline-dark btn-minus"><i class="fas fa-minus"></i></button>
+            <div class="product-info-tab tab-title active" onclick="changeTab(event,'ttsp','ttsp-active')">Thông tin sản phẩm
+              <div id="ttsp-active" class="active-line d-flex justify-content-center">
+                <i class="fas fa-sort-up"></i>
               </div>
-              <input class="quantity" min="0" name="quantity" value="1" type="number">
-              <div class="input-group-append">
-                <button class="btn btn-outline-dark btn-plus">
-                  <i class="fa fa-plus"></i>
-                </button>
+            </div>
+            <div class="product-info-tab tab-title" onclick="changeTab(event,'ctsp','ctsp-active')">Chi tiết sản phẩm
+              <div id="ctsp-active" class="active-line d-flex justify-content-center">
+                <i class="fas fa-sort-up"></i>
               </div>
             </div>
           </div>
-          <div class="product-action d-flex">
-            <button class="btn-action btn btn-light d-flex align-items-center justify-content-center"><i class='bx bx-cart'></i></button>
-            <button class="btn-action btn btn-light d-flex align-items-center justify-content-center"><i class='bx bx-heart'></i></button>
+
+          <div class="tabcontent product-info-content" id="ttsp">
+            <div class="product-category">Dược phẩm</div>
+            <div class="product-dt-name">Fabamox 500mg</div>
+            <div class="product-price" id="pd-price">46.000 VNĐ</div>
+            <div class="product-status"><i class="fas fa-check"></i>Còn hàng</div>
+            <div class="product-quantity col-4 p-0">
+              <div class="product-quantity-input input-group">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-dark btn-minus"><i class="fas fa-minus"></i></button>
+                </div>
+                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-dark btn-plus">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product-action d-flex">
+              <button class="btn-action btn btn-light d-flex align-items-center justify-content-center"><i class='bx bx-cart'></i></button>
+              <button class="btn-action btn btn-light d-flex align-items-center justify-content-center"><i class='bx bx-heart'></i></button>
+            </div>
           </div>
+
+          <div class="tabcontent product-info-content" id="ctsp" style="display: none;">
+            <p>
+              Hoạt chất: Amoxicillin<br>
+              Hàm lượng: 500mg<br>
+              ĐVT: Viên phân tán<br>
+              Số visa: VD-169420<br>
+              Công ty cổ phần ABC XZY<br>
+              Made in Vietnam
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
 
     <div class="container p-0 other-products">
       <div class="other-products-title">Sản Phẩm Khác</div>
-      <div class="other-products-wrapper row m-0">
-        <div class="product-slider-control col-1">
-        <div class="control d-flex align-items-center justify-content-center">
+      <div class="other-products-wrapper row">
+        <a href="#op-carousel" data-slide="prev" class="product-slider-control col-1">
+        <div class="control op-control d-flex align-items-center justify-content-center">
           <div class="ctrl d-flex align-items-center justify-content-center">
             <i class="fas fa-chevron-left"></i>
           </div>
         </div>
+        </a>
+        
+        <div id="op-carousel" class="carousel slide col-10 p-0" data-ride="carousel" data-interval="0">
+
+          <div class="product-slider carousel-inner d-flex">
+            <div class="carousel-item active">
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-slider-card col">
+                <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
+                  <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
+                  <div class="product-name pl-3">Set khẩu trang y tế</div>
+                  <div class="product-divider mx-3 mt-1 mb-2"></div>
+                  <div class="product-details row">
+                    <div class="product-pnr col pr-0">
+                      <div class="product-ratings row m-0">✩✩✩✩✩</div>
+                      <div class="product-price row m-0">500.000 VNĐ</div>
+                    </div>
+                    <div class=" row m-0 product-info col-auto pr-3 pl-2 d-flex justify-content-center align-items-end">
+                      <div class="product-link">i</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
-      
-        <div class="product-slider col-10 p-0 d-flex">
-          <div class="product-slider-card col">
-            <div class="product-slider-page col-12">Danh sách dụng cụ 1</div>
-            <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
-              <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
-              <div class="product-name pl-3">Set khẩu trang y tế</div>
-              <div class="product-divider mx-3 mt-1 mb-2"></div>
-              <div class="product-details row">
-                <div class="product-pnr col pr-0">
-                  <div class="product-ratings row m-0 pl-3">✩✩✩✩✩</div>
-                  <div class="product-price row m-0 pl-3">500.000 VNĐ</div>
-                </div>
-                <div class="product-info col-auto px-3 d-flex justify-content-center align-items-end">
-                  <div class="product-link">i</div>
-                </div>
-              </div>
+
+        <a href="#op-carousel" data-slide="next" class="product-slider-control col-1">
+          <div class="control op-control d-flex align-items-center justify-content-center">
+            <div class="ctrl d-flex align-items-center justify-content-center">
+              <i class="fas fa-chevron-right"></i>
             </div>
           </div>
-          <div class="product-slider-card col">
-            <div class="product-slider-page col-12">Danh sách dụng cụ 1</div>
-            <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
-              <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
-              <div class="product-name pl-3">Set khẩu trang y tế</div>
-              <div class="product-divider mx-3 mt-1 mb-2"></div>
-              <div class="product-details row">
-                <div class="product-pnr col pr-0">
-                  <div class="product-ratings row m-0 pl-3">✩✩✩✩✩</div>
-                  <div class="product-price row m-0 pl-3">500.000 VNĐ</div>
-                </div>
-                <div class="product-info col-auto px-3 d-flex justify-content-center align-items-end">
-                  <div class="product-link">i</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product-slider-card col">
-            <div class="product-slider-page col-12">Danh sách dụng cụ 1</div>
-            <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
-              <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
-              <div class="product-name pl-3">Set khẩu trang y tế</div>
-              <div class="product-divider mx-3 mt-1 mb-2"></div>
-              <div class="product-details row">
-                <div class="product-pnr col pr-0">
-                  <div class="product-ratings row m-0 pl-3">✩✩✩✩✩</div>
-                  <div class="product-price row m-0 pl-3">500.000 VNĐ</div>
-                </div>
-                <div class="product-info col-auto px-3 d-flex justify-content-center align-items-end">
-                  <div class="product-link">i</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product-slider-card col">
-            <div class="product-slider-page col-12">Danh sách dụng cụ 1</div>
-            <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
-              <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
-              <div class="product-name pl-3">Set khẩu trang y tế</div>
-              <div class="product-divider mx-3 mt-1 mb-2"></div>
-              <div class="product-details row">
-                <div class="product-pnr col pr-0">
-                  <div class="product-ratings row m-0 pl-3">✩✩✩✩✩</div>
-                  <div class="product-price row m-0 pl-3">500.000 VNĐ</div>
-                </div>
-                <div class="product-info col-auto px-3 d-flex justify-content-center align-items-end">
-                  <div class="product-link">i</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product-slider-card col">
-            <div class="product-slider-page col-12">Danh sách dụng cụ 1</div>
-            <div class="product-card col-12 p-0 d-flex flex-column justify-content-end">
-              <div class="product-image col p-0 d-flex justify-content-center align-items-center"><img src="img/ktrangyte.png" alt=""></div>
-              <div class="product-name pl-3">Set khẩu trang y tế</div>
-              <div class="product-divider mx-3 mt-1 mb-2"></div>
-              <div class="product-details row">
-                <div class="product-pnr col pr-0">
-                  <div class="product-ratings row m-0 pl-3">✩✩✩✩✩</div>
-                  <div class="product-price row m-0 pl-3">500.000 VNĐ</div>
-                </div>
-                <div class="product-info col-auto px-3 d-flex justify-content-center align-items-end">
-                  <div class="product-link">i</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <div class="product-slider-control col-1">          
-        <div class="control d-flex align-items-center justify-content-center">
-          <div class="ctrl d-flex align-items-center justify-content-center">
-            <i class="fas fa-chevron-right"></i>
-          </div>
-        </div>
-        </div>
+        </a>
       </div>
     </div>
 
@@ -292,54 +483,107 @@
           <input class="promo-button" type="button" value="KHÁM PHÁ THÊM">
         </div>
         <div class="promo-slider col-9 d-flex">
-          <div class="promo-slider-control col-1">
+
+          <a href="#promo-carousel" data-slide="prev" class="promo-slider-control col-1">
             <div class="promo-control d-flex align-items-center justify-content-center">
               <div class="ctrl promo-ctrl d-flex align-items-center justify-content-center">
                 <i class="fas fa-chevron-left"></i>
               </div>
             </div>
+          </a>
+        
+
+          <div id="promo-carousel" class="carousel slide col-10 p-0" data-ride="carousel" data-interval="0">
+            <div class="promo-slider carousel-inner d-flex">
+
+              <div class="carousel-item active">
+                <div class="promo-slider-card col px-1">
+                  <div class="promo-card col-12 p-0 d-flex flex-column">
+                    <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/morphin.png" alt=""></div>
+                    <div class="promo-card-info">Morphine set</div>
+                    <div class="promo-card-rating">✩✩✩✩✩</div>
+                    <div class="promo-card-price">500.000 VND</div>
+                  </div>
+                </div>
+
+                <div class="promo-slider-card col px-1">
+                  <div class="promo-card col-12 p-0 d-flex flex-column">
+                    <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/herbal.png" alt=""></div>
+                    <div class="promo-card-info">Thuốc tự nhiên đã qua điều chế </div>
+                    <div class="promo-card-rating">✩✩✩✩✩</div>
+                    <div class="promo-card-price">500.000 VND</div>
+                  </div>
+                </div>
+
+                <div class="promo-slider-card col px-1">
+                  <div class="promo-card col-12 p-0 d-flex flex-column">
+                    <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/medbox.png" alt=""></div>
+                    <div class="promo-card-info">Medical Box Kit</div>
+                    <div class="promo-card-rating">✩✩✩✩✩</div>
+                    <div class="promo-card-price">500.000 VND</div>
+                  </div>
+                </div>
+
+                <div class="promo-slider-card col px-1">
+                  <div class="promo-card col-12 p-0 d-flex flex-column">
+                    <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/blackmask.png" alt=""></div>
+                    <div class="promo-card-info">Khẩu trang đen pack (50 cái)</div>
+                    <div class="promo-card-rating">✩✩✩✩✩</div>
+                    <div class="promo-card-price">500.000 VND</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="promo-slider-card col px-1">
+                  <div class="promo-card col-12 p-0 d-flex flex-column">
+                    <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/morphin.png" alt=""></div>
+                    <div class="promo-card-info">Morphine set</div>
+                    <div class="promo-card-rating">✩✩✩✩✩</div>
+                    <div class="promo-card-price">500.000 VND</div>
+                  </div>
+                </div>
+
+                <div class="promo-slider-card col px-1">
+                  <div class="promo-card col-12 p-0 d-flex flex-column">
+                    <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/herbal.png" alt=""></div>
+                    <div class="promo-card-info">Thuốc tự nhiên đã qua điều chế </div>
+                    <div class="promo-card-rating">✩✩✩✩✩</div>
+                    <div class="promo-card-price">500.000 VND</div>
+                  </div>
+                </div>
+
+                <div class="promo-slider-card col px-1">
+                  <div class="promo-card col-12 p-0 d-flex flex-column">
+                    <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/medbox.png" alt=""></div>
+                    <div class="promo-card-info">Medical Box Kit</div>
+                    <div class="promo-card-rating">✩✩✩✩✩</div>
+                    <div class="promo-card-price">500.000 VND</div>
+                  </div>
+                </div>
+
+                <div class="promo-slider-card col px-1">
+                  <div class="promo-card col-12 p-0 d-flex flex-column">
+                    <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/blackmask.png" alt=""></div>
+                    <div class="promo-card-info">Khẩu trang đen pack (50 cái)</div>
+                    <div class="promo-card-rating">✩✩✩✩✩</div>
+                    <div class="promo-card-price">500.000 VND</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div class="promo-slider col-10 p-0 d-flex">
-            <div class="promo-slider-card col">
-              <div class="promo-card col-12 p-0 d-flex flex-column">
-                <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/morphin.png" alt=""></div>
-                <div class="promo-card-info">Morphine set</div>
-                <div class="promo-card-rating">✩✩✩✩✩</div>
-                <div class="promo-card-price">500.000 VND</div>
-              </div>
-            </div>
-            <div class="promo-slider-card col">
-              <div class="promo-card col-12 p-0 d-flex flex-column">
-                <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/herbal.png" alt=""></div>
-                <div class="promo-card-info">Morphine set</div>
-                <div class="promo-card-rating">✩✩✩✩✩</div>
-                <div class="promo-card-price">500.000 VND</div>
-              </div>
-            </div>
-            <div class="promo-slider-card col">
-              <div class="promo-card col-12 p-0 d-flex flex-column">
-                <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/medbox.png" alt=""></div>
-                <div class="promo-card-info">Morphine set</div>
-                <div class="promo-card-rating">✩✩✩✩✩</div>
-                <div class="promo-card-price">500.000 VND</div>
-              </div>
-            </div>
-            <div class="promo-slider-card col">
-              <div class="promo-card col-12 p-0 d-flex flex-column">
-                <div class="promo-card-thumb d-flex justify-content-center align-items-end"><img src="img/blackmask.png" alt=""></div>
-                <div class="promo-card-info">Morphine set</div>
-                <div class="promo-card-rating">✩✩✩✩✩</div>
-                <div class="promo-card-price">500.000 VND</div>
-              </div>
-            </div>
-          </div>
-          <div class="promo-slider-control col-1 d-flex justify-content-end">
+
+          
+          <a href="#promo-carousel" data-slide="next" class="promo-slider-control col-1 d-flex justify-content-end">
             <div class="promo-control d-flex align-items-center justify-content-center">
               <div class="ctrl promo-ctrl d-flex align-items-center justify-content-center">
                 <i class="fas fa-chevron-right"></i>
               </div>
             </div>
-          </div>
+          </a>
+
         </div>
       </div>
     </div>
@@ -416,5 +660,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

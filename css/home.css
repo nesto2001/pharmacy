@@ -138,7 +138,7 @@ html, body {
     color: black;
 }
 
-.link:hover{
+a:hover,.link:hover{
     text-decoration: none;
 }
 
@@ -420,20 +420,19 @@ html, body {
 }
 
 .product-slider-card {
-    padding: 0px 10px;
+    padding: 0px 10px 10px 10px;
 }
 
-.product-slider div:first-child{
-    padding-left: 0;
+.slider-list{
+    text-align: center;
 }
 
-.product-slider div:last-child{
-    padding-right: 0;
+.slider-list > *{
+    margin: 5px 10px 16px 10px;
+    padding: 0;
 }
-
 
 .control{
-    margin-top: 60px;
     height: 320px;
 }
 
@@ -503,6 +502,19 @@ html, body {
     margin: 0px 120px;
     cursor: pointer;
 }
+
+.yt-line.active-line i{
+    bottom: 8px;
+}
+
+.sd-l-active{
+    color: var(--major-color);
+}
+
+.active-line:not(.selected-list){
+    display: none !important;
+}
+
 
 .monthly-promo{
     margin-top: 50px;
@@ -596,12 +608,16 @@ html, body {
 }
 
 .promo-card-info{
+    width: 154px;
+    overflow: hidden;
     margin-top: 10px;
+    height: 50px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
 
-.promo-card-rating{
-    margin-top: 15px;
-}
 
 .promo-card-price{
     margin-top: 4px;
@@ -779,11 +795,6 @@ footer ul li{
     border-bottom: 1px solid rgba(72, 72, 72, 0.3);
 }
 
-.tablinks{
-    margin-right: 20px;
-    cursor: pointer;
-}
-
 .tabcontent,.getintouch-info{
     margin-top: 40px;
 }
@@ -791,8 +802,6 @@ footer ul li{
 .form-title{
     font-size: 17px;
 }
-
-.tabcontent
 
 .form-input{
     width: 100%;
@@ -850,11 +859,11 @@ footer ul li{
 }
 
 .git-active-line i,.active-line i{
-	position: absolute;
+	position: relative;
 	color: #596EBF;
 	text-align: left;
     z-index: 2;
-    bottom: -15px;
+    bottom: 15px;
     transform: scale(1.2,1.8);
 }
 
@@ -876,11 +885,11 @@ footer ul li{
     width: 100%;
 }
 
-.product-images{
+.product-dt-images{
     margin-right: 20px;
 }
 
-.product-image{
+.product-dt-image{
     width: 80px;
     height: 80px;
     border-radius: 18px;
@@ -892,7 +901,7 @@ footer ul li{
     border-color: var(--major-color);
 }
 
-.product-image img{
+.product-dt-image img{
     width: 100%;
 }
 
@@ -913,6 +922,7 @@ footer ul li{
     color: rgba(0, 0, 0, 0.5);
     margin-right: 20px;
     height: 50px;
+    cursor: pointer;
 }
 
 .btn-minus{
@@ -945,7 +955,11 @@ footer ul li{
     font-size: 30px;
 }
 
-.product-info >*:not(.product-info div:first-child){
+.product-info-content {
+    margin-top: 20px !important;
+}
+
+.product-info-content >*{
     margin-top: 10px;
 }
 
@@ -959,4 +973,69 @@ footer ul li{
 
 .subscription{
     margin-top: 40px;
+}
+
+.active {
+    color: black;
+}
+
+#ctsp-active {
+    display: none !important;
+}
+
+.product-action{
+    margin-top: 20px;
+}
+
+.btn-light{
+    background-color: rgba(218, 218, 218, 0.4) !important;
+}
+
+.product-category{
+    font-size: 16px;
+    color: #565656;
+}
+
+.product-dt-name{
+    font-size: 30px;
+}
+
+#pd-price,.product-status{
+    color: var(--major-color);
+    font-size: 18px;
+}
+
+.product-status i{
+    font-size: 22px;
+    margin-right: 18px;
+}
+
+.product-status{
+    font-weight: 700;
+}
+
+#ctsp p{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.other-products-wrapper {
+    margin: 0px;
+    margin-top: 40px;
+}
+
+.op-control{
+    margin-top: 0 !important;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: flex;
+}
+
+.inactive-pd-info{
+    background: rgba(218, 218, 218, 0.6) !important;
+    color: rgba(72, 72, 72, 0.65) !important;
 }

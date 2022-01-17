@@ -81,13 +81,13 @@
   
             <div class="nav-link col-8 p-0 m-0">
               <ul class="cow-12 m-0 p-0 d-flex align-items-center" style="height:50px;">
-                <li class="col-auto"><a href="#" class="link" id="active">Trang Chủ</a></li>
+                <li class="col-auto"><a href="#" class="link">Trang Chủ</a></li>
                 <li class="col-auto"><a href="#" class="link">Hoạt Chất</a></li>
                 <li class="col-auto"><a href="#" class="link">Tìm Hiểu Bệnh</a></li>
                 <li class="col-auto"><a href="#" class="link">Về Chúng Tôi</a></li>
                 <li class="col-auto"><a href="#" class="link">Tin Tức</a></li>
                 <li class="col-auto"><a href="order.html" class="link">Đặt Hàng Nhanh</a></li>
-                <li class="col-auto"><a href="contact.html" class="link">Liên Hệ</a></li>
+                <li class="col-auto"><a href="contact.html" class="link" id="active">Liên Hệ</a></li>
               </ul>
             </div>
           </div>
@@ -106,10 +106,10 @@
         <div class="contact-information row m-0">
             <div class="contact-form col-7 p-0">
                 <div class="contact-tabs tab contact-title col-11 p-0 d-flex">
-                    <div class="tablinks col-auto p-0" onclick="changeTab('thongtin','contact-active')">Thông tin liên lạc
+                    <div class="tab-title col-auto p-0 active" onclick="changeTab(event, 'thongtin','contact-active')">Thông tin liên lạc
                       <div id="contact-active" class="active-line d-flex justify-content-center"><i class="fas fa-sort-up"></i></div>
                     </div>
-                    <div class="tablinks col-auto p-0" onclick="changeTab('chinhanh','branch-active')">Hệ thống cửa hàng
+                    <div class="tab-title col-auto p-0" onclick="changeTab(event, 'chinhanh','branch-active')">Hệ thống cửa hàng
                       <div id="branch-active" class="active-line d-flex justify-content-center"><i class="fas fa-sort-up"></i></div>
                     </div>
                 </div>
