@@ -343,7 +343,7 @@ html, body {
     background-color: transparent;
 }
 
-.form-control:focus {
+.form-control:focus,.btn:focus {
     outline: none;
     box-shadow: none;
 }
@@ -874,4 +874,89 @@ footer ul li{
 
 .ggmap-wrapper img{
     width: 100%;
+}
+
+.product-images{
+    margin-right: 20px;
+}
+
+.product-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    border: 2px solid rgba(200, 200, 200, 0.8);
+    margin-bottom: 20px;
+}
+
+.active-image{
+    border-color: var(--major-color);
+}
+
+.product-image img{
+    width: 100%;
+}
+
+.product-thumb{
+    width: 384px;
+    height: 384px;
+    border-radius: 18px;
+    border: 2px solid var(--major-color);
+    margin-right: 40px;
+}
+
+.product-thumb img{
+    width: 100%;
+}
+
+.tab-title{
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+    height: 50px;
+}
+
+.btn-minus{
+    border-radius: 8px 0px 0px 8px !important;
+}
+
+.btn-plus{
+    border-radius: 0px 8px 8px 0px !important;
+}
+
+.quantity{
+    width: 50px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-action{
+    width: 48px !important;
+    height: 48px !important;
+    margin-right: 20px;
+}
+
+.btn-action i{
+    font-size: 30px;
+}
+
+.product-info >*:not(.product-info div:first-child){
+    margin-top: 10px;
+}
+
+.other-products{
+    margin-top: 20px;
+}
+
+.other-products-title{
+    font-size: 24px;
+}
+
+.subscription{
+    margin-top: 40px;
 }

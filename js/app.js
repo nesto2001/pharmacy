@@ -25,3 +25,4 @@ function changeTab(content, active) {
   document.getElementById(content).style.display = "block";
   document.getElementById(active).setAttribute('style', 'display: flex !important');
 }
+
