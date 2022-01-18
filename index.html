@@ -299,7 +299,7 @@
           </div>
         </a>
 
-        <div id="yte-carousel" class="carousel slide col-8 p-0 " data-ride="carousel" data-interval="0">
+        <div id="yte-carousel" class="carousel pd-carousel slide col-8 p-0 " data-ride="carousel" data-interval="0">
           <div class="product-slider carousel-inner d-flex">
             <div class="carousel-item active">
               <div class="product-slider-card col">
@@ -583,10 +583,30 @@
         <div class="slider-title title col-2">Dược phẩm</div>
         <div class="col-1"></div>
         <div class="col-8 p-0 d-flex slider-list">
-          <div class="col">Danh sách thuốc 1</div>
-          <div class="col">Danh sách thuốc 2</div>
-          <div class="col">Danh sách thuốc 3</div>
-          <div class="col">Danh sách thuốc 4</div>
+          <div class="col">
+            <span class="dp-l sd-l-active" onclick="changeList(event, 'dp-l', 'dp-line')" data-target="#dpham-carousel" data-slide-to="0">Danh sách thuốc 1</span>
+            <div class="dp-line active-line selected-list d-flex justify-content-center">
+              <i class="fas fa-sort-up"></i>
+            </div>
+          </div>
+          <div class="col">
+            <span class="dp-l" onclick="changeList(event, 'dp-l', 'dp-line')" data-target="#dpham-carousel" data-slide-to="1">Danh sách thuốc 2</span>
+            <div class="dp-line active-line d-flex justify-content-center">
+              <i class="fas fa-sort-up"></i>
+            </div>
+          </div>
+          <div class="col">
+            <span class="dp-l" onclick="changeList(event, 'dp-l', 'dp-line')" data-target="#dpham-carousel" data-slide-to="2">Danh sách thuốc 3</span>
+            <div class="dp-line active-line d-flex justify-content-center">
+              <i class="fas fa-sort-up"></i>
+            </div>
+          </div>
+          <div class="col">
+            <span class="dp-l" onclick="changeList(event, 'dp-l', 'dp-line')" data-target="#dpham-carousel" data-slide-to="3">Danh sách thuốc 4</span>
+            <div class="dp-line active-line d-flex justify-content-center">
+              <i class="fas fa-sort-up"></i>
+            </div>
+          </div>
         </div>
         <div class="col-1"></div>
       </div>
@@ -605,7 +625,7 @@
           </div>
         </a>
 
-        <div id="dpham-carousel" class="carousel slide col-8 p-0 " data-ride="carousel" data-interval="0">
+        <div id="dpham-carousel" class="carousel pd-carousel slide col-8 p-0 " data-ride="carousel" data-interval="0">
           <div class="product-slider carousel-inner d-flex">
             <div class="carousel-item active">
               <div class="product-slider-card col">
@@ -889,10 +909,30 @@
         <div class="slider-title title col-2">Dụng cụ Y Tế</div>
         <div class="col-1"></div>
         <div class="col-8 p-0 d-flex slider-list">
-          <div class="col">Danh sách dụng cụ 1</div>
-          <div class="col">Danh sách dụng cụ 2</div>
-          <div class="col">Danh sách dụng cụ 3</div>
-          <div class="col">Danh sách dụng cụ 4</div>
+          <div class="col">
+            <span class="dc-l sd-l-active" onclick="changeList(event, 'dc-l', 'dc-line')" data-target="#dcuyte-carousel" data-slide-to="0">Danh sách dụng cụ 1</span>
+            <div class="dc-line active-line selected-list d-flex justify-content-center">
+              <i class="fas fa-sort-up"></i>
+            </div>
+          </div>
+          <div class="col">
+            <span class="dc-l" onclick="changeList(event, 'dc-l', 'dc-line')" data-target="#dcuyte-carousel" data-slide-to="1">Danh sách dụng cụ 2</span>
+            <div class="dc-line active-line d-flex justify-content-center">
+              <i class="fas fa-sort-up"></i>
+            </div>
+          </div>
+          <div class="col">
+            <span class="dc-l" onclick="changeList(event, 'dc-l', 'dc-line')" data-target="#dcuyte-carousel" data-slide-to="2">Danh sách dụng cụ 3</span>
+            <div class="dc-line active-line d-flex justify-content-center">
+              <i class="fas fa-sort-up"></i>
+            </div>
+          </div>
+          <div class="col">
+            <span class="dc-l" onclick="changeList(event, 'dc-l', 'dc-line')" data-target="#dcuyte-carousel" data-slide-to="3">Danh sách dụng cụ 4</span>
+            <div class="dc-line active-line d-flex justify-content-center">
+              <i class="fas fa-sort-up"></i>
+            </div>
+          </div>
         </div>
         <div class="col-1"></div>
       </div>
@@ -911,7 +951,7 @@
           </div>
         </a>
 
-        <div id="dcuyte-carousel" class="carousel slide col-8 p-0 " data-ride="carousel" data-interval="0">
+        <div id="dcuyte-carousel" class="carousel pd-carousel slide col-8 p-0 " data-ride="carousel" data-interval="0">
           <div class="product-slider carousel-inner d-flex">
             <div class="carousel-item active">
               <div class="product-slider-card col">
@@ -1189,7 +1229,7 @@
         </a>
       </div>
 
-      <div class="product-slider-paging d-flex justify-content-center"><i class='bx bx-chevrons-left'></i><i class='bx bx-chevrons-right'></i></box-icon></div>
+      <div class="product-slider-paging d-flex justify-content-center"><i id="carousels-prev" class='bx bx-chevrons-left'></i><i id="carousels-next" class='bx bx-chevrons-right'></i></box-icon></div>
 
     </div>
 

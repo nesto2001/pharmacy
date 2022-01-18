@@ -54,8 +54,77 @@ function changeList(evt, list, line){
 
     cline=clinewrapper.querySelector("."+line);
 
-    console.log(cline.className);
-
     cline.className += " selected-list";
-
 }
+
+$(function(){
+  var i, listindex;
+  var carouselDc = $('#dcuyte-carousel');
+  var carouselDcLi = $('.dc-l');
+  var carouselDcItems = carouselDc.find('.carousel-item');
+  
+  var carouselYt = $('#yte-carousel');
+  var carouselYtLi = $('.yt-l');
+  var carouselYtItems = carouselYt.find('.carousel-item');
+
+  var carouselDp = $('#dpham-carousel');
+  var carouselDpLi = $('.dp-l');
+  var carouselDpItems = carouselDp.find('.carousel-item');
+  
+
+  carouselDc.carousel().on('slid.bs.carousel', function (event) {
+    for (i=0;i<carouselDcLi.length;i++){
+      carouselDcLi[i].className = carouselDcLi[i].className.replace(" sd-l-active","");
+    };
+    $('.dc-line').each(function(){
+      $(this).removeClass("selected-list");
+    });
+    for (i=0;i<carouselDcLi.length;i++){
+      if (carouselDcLi[i].getAttribute("data-slide-to")==carouselDcItems.siblings('.active').index()) {
+        carouselDcLi[i].className += " sd-l-active";
+        listindex=i;
+      }
+    };
+    carouselDcLi[listindex].closest('.col').querySelector(".active-line").className += " selected-list";
+  })
+
+  carouselYt.carousel().on('slid.bs.carousel', function (event) {
+    for (i=0;i<carouselYtLi.length;i++){
+      carouselYtLi[i].className = carouselYtLi[i].className.replace(" sd-l-active","");
+    };
+    $('.yt-line').each(function(){
+      $(this).removeClass("selected-list");
+    });
+    for (i=0;i<carouselYtLi.length;i++){
+      if (carouselYtLi[i].getAttribute("data-slide-to")==carouselYtItems.siblings('.active').index()) {
+        carouselYtLi[i].className += " sd-l-active";
+        listindex=i;
+      }
+    };
+    carouselYtLi[listindex].closest('.col').querySelector(".active-line").className += " selected-list";
+  })
+
+  carouselDp.carousel().on('slid.bs.carousel', function (event) {
+    for (i=0;i<carouselDpLi.length;i++){
+      carouselDpLi[i].className = carouselDpLi[i].className.replace(" sd-l-active","");
+    };
+    $('.dp-line').each(function(){
+      $(this).removeClass("selected-list");
+    });
+    for (i=0;i<carouselDpLi.length;i++){
+      if (carouselDpLi[i].getAttribute("data-slide-to")==carouselDpItems.siblings('.active').index()) {
+        carouselDpLi[i].className += " sd-l-active";
+        listindex=i;
+      }
+    };
+    carouselDpLi[listindex].closest('.col').querySelector(".active-line").className += " selected-list";
+  })
+})
+
+$('#carousels-prev').click(function(){
+  $('.pd-carousel').carousel('prev');
+})
+
+$('#carousels-next').click(function(){
+  $('.pd-carousel').carousel('next');
+})
