@@ -156,6 +156,60 @@ a:hover,.link:hover{
     background-color: var(--major-color);
 }
 
+#searchbarinput{
+    border: none;
+    padding-left: 20px;
+}
+
+#searchbarinput::placeholder{
+    color: black;
+}
+
+#phanloaisp{
+    border: none;
+    border-left: 1px solid;
+    border-image: repeating-linear-gradient(to bottom, rgba(0, 0, 0,0), rgba(0, 0, 0,.47), rgba(0, 0, 0,0)) 1;
+}
+
+.searchbar-group{
+    background-color: transparent;
+    border: 3px solid var(--major-color);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.action-desc{
+    color: rgba(0, 0, 0, 0.51);
+}
+
+#login{
+    color: black;
+}
+
+.search-btn{
+    position: relative;
+    width: 45px;
+    top:0px;
+    color: white;
+    background-color: var(--major-color);
+}
+.search-btn button{
+    border: none;
+    color: white;
+    border-radius: 0px 24px 24px 0px;
+}
+
+.search-btn-bg{
+    position: absolute;
+    background-color: var(--major-color);
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    top: 23px;
+    right: 15px;
+    border-radius: 30px;
+}
+
 .bannerqc{
     margin-left: 30px;
     width: 98%;
@@ -1395,4 +1449,59 @@ input.discount-input{
     font-size: 20px;
     margin-top: 120px;
     margin-bottom: 80px;
+}
+
+.breadcrumb{
+    background-color: transparent;
+    padding-left: 0;
+    padding-bottom: 0;
+    font-size: 18px;
+}
+
+.breadcrumb-divider{
+    margin-right: 5px;
+}
+
+a{
+    color: var(--major-color);
+}
+
+.counter{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--major-color);
+    z-index: 1;
+    color: white;
+    text-align: center;
+    font-size: 9px;
+    border-radius: 20px;
+    top: -15px;    
+    left: 65px;
+}
+
+.checkout-item-counter{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    top: -95px;
+    font-weight: 600;
+}
+
+.review-control{
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+}
+
+.sale-badge{
+    position: absolute;
+    z-index: 2;
+    width: 45px;
+    height: 45px;
+    background-color: var(--major-color);
+    border-radius: 32px;
+    color: white;
+    top: 50px;
 }

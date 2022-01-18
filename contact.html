@@ -16,88 +16,93 @@
   <body>
     
     <div class="container page-header">
-        <div class="navbar p-0">
-          <div class="navbar-top col-12 row p-0 m-0">
-  
-            <a class="navbar-brand col-3" href="index.html">
-              <img src="img/logo.png" />
-            </a>
-  
-            <div class="searchbar d-flex align-items-center col-5">
-              <div class="input-group">
-  
-                <input type="text" class="form-control" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
-  
-                <div class="input-group-btn">
-                  <select class="input-group btn btn-default dropdown-toggle form-control">
-                    <option value="" selected hidden>Phân loại sản phẩm</option>
-                    <option value="1">Dược phẩm</option>
-                    <option value="2">Thiết bị y tế</option>
-                    <option value="3">Mỹ phẩm</option>
-                    <option value="4">Dụng cụ y tế</option>
-                    <option value="5">TP chức năng</option>
-                    <option value="6">TP cho trẻ em</option>
-                  </select>
-                </div>
-  
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
-                </span>
-  
+      <div class="navbar p-0">
+        <div class="navbar-top col-12 row p-0 m-0">
+
+          <a class="navbar-brand col-3" href="index.html">
+            <img src="img/logo.png" />
+          </a>
+
+          <div class="searchbar d-flex align-items-center col-5">
+            <div class="input-group searchbar-group">
+
+              <input type="text" class="form-control" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
+
+              <div class="input-group-btn">
+                <select id="phanloaisp" class="input-group btn btn-default dropdown-toggle form-control">
+                  <option value="" selected hidden>Phân loại sản phẩm</option>
+                  <option value="1">Dược phẩm</option>
+                  <option value="2">Thiết bị y tế</option>
+                  <option value="3">Mỹ phẩm</option>
+                  <option value="4">Dụng cụ y tế</option>
+                  <option value="5">TP chức năng</option>
+                  <option value="6">TP cho trẻ em</option>
+                </select>
               </div>
-  
-            </div>
-  
-            <div class="user col-4 row">
-              <div class="icon col-1 d-flex align-items-center"><i class="bx bx-heart"></i></div>
-              <div class="icon col-1 d-flex align-items-center"><i class="bx bx-cart"></i></div>
-              <div class="user-account col-7 row align-items-center">
-                <div class="icon col-1 d-flex align-items-center mr-2"><i class="bx bx-user"></i></div>
-                <div class="user-action col row p-0 m-0">
-                  <div class="action-desc col-12">
-                    My Account
-                  </div>
-                  <div class="action-btn col-12">
-                    Đăng nhập/Đăng ký
-                  </div>
-                </div>
+
+              <div class="input-group-btn search-btn">
+                <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
               </div>
             </div>
-  
+            <div class="search-btn-bg"></div>
           </div>
-  
-          <div class="navbar-bottom col-12 row p-0">
-            <div class="menu-category input-group col-3 p-0">
-              <div class="menu input-group-btn" id="hambur">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <i class="fas fa-bars"></i>
-                </button>
-              </div>
-              <div class="category-ctl input-group-btn col-auto d-flex align-items-center pr-0">
-                <div class="mr-4">Danh Mục Sản Phẩm</div>
-                <i class="fas fa-angle-down ml-4"></i>
-              </div>
+
+          <div class="user col-4 row">
+            <div class="icon col-1 d-flex align-items-center">
+              <i class="bx bx-heart"></i>
+              <div class="counter d-flex justify-content-center align-items-center">0</div>
             </div>
-  
-            <div class="nav-link col-8 p-0 m-0">
-              <ul class="cow-12 m-0 p-0 d-flex align-items-center" style="height:50px;">
-                <li class="col-auto"><a href="#" class="link">Trang Chủ</a></li>
-                <li class="col-auto"><a href="#" class="link">Hoạt Chất</a></li>
-                <li class="col-auto"><a href="#" class="link">Tìm Hiểu Bệnh</a></li>
-                <li class="col-auto"><a href="#" class="link">Về Chúng Tôi</a></li>
-                <li class="col-auto"><a href="#" class="link">Tin Tức</a></li>
-                <li class="col-auto"><a href="order.html" class="link">Đặt Hàng Nhanh</a></li>
-                <li class="col-auto"><a href="contact.html" class="link" id="active">Liên Hệ</a></li>
-              </ul>
+            <div class="icon col-1 d-flex align-items-center">
+              <i class="bx bx-cart"></i>
+              <div class="counter d-flex justify-content-center align-items-center">0</div>
+            </div>
+            <div class="user-account col-7 row align-items-center">
+              <div class="icon col-1 d-flex align-items-center mr-2"><i class="bx bx-user"></i></div>
+              <div class="user-action col row p-0 m-0">
+                <div class="action-desc col-12">
+                  My Account
+                </div>
+                <div class="action-btn col-12">
+                  <a href="#" id="login">Đăng nhập/Đăng ký</a>
+                </div>
+              </div>
             </div>
           </div>
-  
+
         </div>
+
+        <div class="navbar-bottom col-12 row p-0">
+          <div class="menu-category input-group col-3 p-0">
+            <div class="menu input-group-btn" id="hambur">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+            <div class="category-ctl input-group-btn col-auto d-flex align-items-center pr-0">
+              <div class="mr-4">Danh Mục Sản Phẩm</div>
+              <i class="fas fa-angle-down ml-4"></i>
+            </div>
+          </div>
+
+          <div class="nav-link col-8 p-0 m-0">
+            <ul class="cow-12 m-0 p-0 d-flex align-items-center" style="height:50px;">
+              <li class="col-auto"><a href="index.html" class="link">Trang Chủ</a></li>
+              <li class="col-auto"><a href="#" class="link">Hoạt Chất</a></li>
+              <li class="col-auto"><a href="#" class="link">Tìm Hiểu Bệnh</a></li>
+              <li class="col-auto"><a href="#" class="link">Về Chúng Tôi</a></li>
+              <li class="col-auto"><a href="#" class="link">Tin Tức</a></li>
+              <li class="col-auto"><a href="order.html" class="link">Đặt Hàng Nhanh</a></li>
+              <li class="col-auto"><a href="#" class="link"  id="active">Liên Hệ</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
     </div>  
 
     <div class="container site-pagination p-0">
       <ul class="breadcrumb">
-        <li><a href="">Trang chủ</a><span class="breadcrumb-divider">></span></li>
+        <li>Trang chủ <span class="breadcrumb-divider">></span></li>
         <li><a href="contact.html">Liên hệ</a></li>
       </ul>
     </div>

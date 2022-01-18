@@ -128,3 +128,58 @@ $('#carousels-prev').click(function(){
 $('#carousels-next').click(function(){
   $('.pd-carousel').carousel('next');
 })
+
+function showImage(event) {
+  var i,otherImgs;
+  var otherImgs = document.getElementsByClassName('product-dt-image');
+  for (i=0;i < otherImgs.length; i++){
+    otherImgs[i].className = otherImgs[i].className.replace(" active-image","");
+  }
+
+  var newImg=event.target.closest('.other-img');
+  event.target.closest('.product-dt-image').className += " active-image";
+  var curImg = document.getElementById('mainThumb');
+
+  curImg.src  = newImg.src;
+}
+
+(function () {
+  var promoMonth;
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+ 
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
+        "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  var now = new Date();
+  promoMonth = months[now.getMonth()+1]
+  var promo = promoMonth + " 1, " + now.getFullYear()+" 00:00:00";
+  let offer= promo,
+      countDown = new Date(offer).getTime(),
+      x = setInterval(function() {    
+ 
+        let now = new Date().getTime(),
+            distance = countDown - now;
+ 
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+ 
+        //do something later when date is reached
+        if (distance < 0) {
+          let headline = document.getElementById("headline"),
+              countdown = document.getElementById("countdown"),
+              content = document.getElementById("content");
+ 
+          headline.innerText = "Ohhh no! Offer has ended";
+          countdown.style.display = "none";
+          content.style.display = "block";
+ 
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
