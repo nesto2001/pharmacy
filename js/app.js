@@ -1,8 +1,7 @@
 function changeTab(evt, content, active) {
-  // Declare all variables
+
   var i, tabcontent, tablinks, areactive;
 
-  // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -13,7 +12,6 @@ function changeTab(evt, content, active) {
       areactive[i].setAttribute('style', 'display: none !important');
   }
 
-  // Get all elements with class="tablinks" and remove the class "active"
   tablinks = document.getElementsByClassName("tab-title");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
@@ -21,7 +19,7 @@ function changeTab(evt, content, active) {
 
   
   evt.target.className += " active";
-  // Show the current tab, and add an "active" class to the button that opened the tab
+  
   document.getElementById(content).style.display = "block";
   document.getElementById(active).setAttribute('style', 'display: flex !important');
   
@@ -167,19 +165,5 @@ function showImage(event) {
           document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
           document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
           document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
- 
-        //do something later when date is reached
-        if (distance < 0) {
-          let headline = document.getElementById("headline"),
-              countdown = document.getElementById("countdown"),
-              content = document.getElementById("content");
- 
-          headline.innerText = "Ohhh no! Offer has ended";
-          countdown.style.display = "none";
-          content.style.display = "block";
- 
-          clearInterval(x);
-        }
-        //seconds
       }, 0)
   }());
