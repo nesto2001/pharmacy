@@ -573,7 +573,7 @@ button:focus,input:focus,select:focus,.form-control:focus,.btn:focus {
     color: var(--major-color);
 }
 
-.active-line:not(.selected-list){
+.slider-list .active-line:not(.selected-list){
     display: none !important;
 }
 
