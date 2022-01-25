@@ -1505,3 +1505,94 @@ a{
     color: white;
     top: 50px;
 }
+
+.hamburg{
+    color: var(--major-color);
+    display: none;
+}
+
+@media (min-width: 767.98px) {
+    .hamburg{
+        display: none !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .page-header{
+        height: 75px;
+    }
+    .navbar-top{
+        height: 75px;
+    }
+    .navbar-bottom{
+        display: none;
+    }
+    .plus{
+        display: none;
+    }
+    .navbar-brand{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+    .navbar-brand img{
+        width: 70%;
+    }
+    .hamburg{
+        display: block;
+        font-size: 3em;
+    }
+    .banner-btn,.searchbar, .user-account .user-action, .user .icon:first-child{
+        display: none !important;
+    }
+    .user > *{
+        margin-right: 5px;
+    }
+    .user-account{
+        display: flex;
+        justify-content: end;
+    }
+    .user{
+        margin-right: 10px;
+    }
+    .user .icon:nth-child(2){
+        margin-left: 0;
+    }
+
+    .navbar-top{
+        border-bottom: 1px solid #6382F0;
+    }
+
+    .counter{
+        top: 20px;
+        left: 20px;
+    }
+
+    .banner-title {
+        font-size: 0.8em;
+        padding-top: 1.5em;
+    }
+    .covid{
+        font-size: 2.2em;
+        height: 1.2em;
+    }
+    .banner-desc{
+        margin-left: 15px;
+    }
+    .bannerqc{
+        padding-top: 0.5em;
+        width: 70%;
+    }
+    .circle{
+        width: 3em;
+        height: 3em;
+        top: 60px;
+        left: 45px;
+    }
+    .banner-pdt{
+        width: 1.8em;
+        left: 55px !important;
+        top: 65px !important;
+    }
+}
