@@ -350,6 +350,10 @@ a:hover,.link:hover{
     font-weight: 600;
 }
 
+.icon > a{
+    color: unset;
+}
+
 .statistics > * {
     height: 100%;
 }
@@ -1560,6 +1564,10 @@ textarea:focus{
     }
     .order-button-wrapper{
         justify-content: end;
+    }
+    .icon > .counter{
+        top: 25px;
+        left: 20px;
     }
 }
 
