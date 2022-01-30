@@ -14,8 +14,17 @@
     <link href="css/home.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container-fluid p-0 d-flex">
-        <div class="half-white col-5">
+    <div class="container-fluid payment-wrap p-0 d-flex">
+
+        <div class="web-banner col-12 p-0 d-block d-lg-none d-xl-none">
+            <div class="container page-header d-flex justify-content-center align-items-center">
+                <a class="logo-wrapper" href="index.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>  
+        </div>
+        
+        <div class="half-white col-12 col-lg-5">
             <div class="container page-header d-flex justify-content-center align-items-center">
                 <div class="logo-wrapper">
                     <img src="img/logo.png" alt="">
@@ -37,13 +46,13 @@
                     <br>
                     Đơn hàng của bạn sẽ được chuyển đến trong vòng xxx ngày
                 </div>
-                <div class="order-button-wrapper d-flex justify-content-end">
+                <div class="order-button-wrapper d-flex">
                     <a href="index.html"><button class="mr-3">Tiếp tục mua hàng</button></a>
                     <a href="payment.html"><button>Theo dõi đơn hàng</button></a>
                   </div>
             </div>
 
-            <div class="payment-footer col-12 p-0">
+            <div class="payment-footer d-none d-lg-block d-xl-block col-12 col-lg-12 p-0">
                 <div class="checkout-divider" style="margin-top: 0;"></div>
                 <div class="payment-footer-content d-flex">
                     <div class="tou mr-4">Điều khoản sử dụng</div>
@@ -51,8 +60,17 @@
                 </div>
             </div>
         </div>
-        <div class="half-grey col">
-            <div class="check-out col-7 p-0">
+
+        <div class="web-footer col-12 col-lg-12 p-0 d-block d-lg-none d-xl-none">
+            <div class="checkout-divider" style="margin-top: 0;"></div>
+            <div class="web-footer-content d-flex">
+                <div class="tou mr-4">Điều khoản sử dụng</div>
+                <div class="rf">Chính sách hoàn trả</div>
+            </div>
+        </div>
+        
+        <div class="half-grey col-12 d-none d-lg-block d-xl-block col-lg">
+            <div class="check-out col-lg-7 p-0">
                 <div class="ordered-list d-flex flex-column">
                     <div class="order-item d-flex">
                         <div class="order-item-img">
@@ -60,10 +78,10 @@
                             <div class="counter checkout-item-counter d-flex justify-content-center align-items-center">10</div>
                         </div>
                         <div class="order-item-desc d-flex flex-column">
-                            <div class="order-item-name col p-0 d-flex align-items-end">Fabamox 1000 DT</div>
-                            <div class="order-item-pres col p-0">1000mg</div>
+                            <div class="order-item-name col-lg p-0 d-flex align-items-end">Fabamox 1000 DT</div>
+                            <div class="order-item-pres col-lg p-0">1000mg</div>
                         </div>
-                        <div class="order-item-price col p-0 d-flex justify-content-end align-items-center">45.000đ</div>
+                        <div class="order-item-price col-lg p-0 d-flex justify-content-end align-items-center">45.000đ</div>
                     </div>
                     <div class="order-item d-flex">
                         <div class="order-item-img">
@@ -71,18 +89,18 @@
                             <div class="counter checkout-item-counter d-flex justify-content-center align-items-center">6</div>
                         </div>
                         <div class="order-item-desc d-flex flex-column">
-                            <div class="order-item-name col p-0 d-flex align-items-end">Katovastin 20 DT</div>
-                            <div class="order-item-pres col p-0">20mg</div>
+                            <div class="order-item-name col-lg p-0 d-flex align-items-end">Katovastin 20 DT</div>
+                            <div class="order-item-pres col-lg p-0">20mg</div>
                         </div>
-                        <div class="order-item-price col p-0 d-flex justify-content-end align-items-center">33.000đ</div>
+                        <div class="order-item-price col-lg p-0 d-flex justify-content-end align-items-center">33.000đ</div>
                     </div>
                 </div>
 
                 <div class="checkout-divider"></div>
 
                 <div class="discount d-flex">
-                    <input type="text" class="discount-input col p-0" placeholder="Mã coupon/discount">
-                    <div class="button-wrapper col-4 p-0 d-flex justify-content-end">
+                    <input type="text" class="discount-input col-lg p-0" placeholder="Mã coupon/discount">
+                    <div class="button-wrapper col-lg-4 p-0 d-flex justify-content-end">
                         <button type="button" class="btn discount-btn">Áp dụng</button>
                     </div>
                 </div>
@@ -90,7 +108,7 @@
                 <div class="checkout-divider"></div>
 
                 <div class="checkout-subtotal">
-                    <table class="col-12">
+                    <table class="col-lg-12">
                         <tbody>
                             <tr>
                                 <td>Tổng phụ</td>
@@ -107,7 +125,7 @@
                 <div class="checkout-divider"></div>
 
                 <div class="checkout-total">
-                    <table class="col-12">
+                    <table class="col-lg-12">
                         <tbody>
                             <tr>
                                 <td>Tổng cộng</td>
@@ -127,6 +145,5 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
   </body>
 </html>

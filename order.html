@@ -17,20 +17,22 @@
 
     <div class="container page-header">
       <div class="navbar p-0">
-        <div class="navbar-top col-12 row p-0 m-0">
-
-          <a class="navbar-brand col-3" href="index.html">
+        <div class="navbar-top col-12 col-lg-12 d-flex flex-wrap p-0 m-0">
+          <div onclick="showPopup()" class="hamburg col-2 d-flex justify-content-center align-items-center">
+            <i class="fas fa-bars"></i>
+          </div>
+          <a class="navbar-brand col-5 col-lg-3" href="index.html">
             <img src="img/logo.png" />
           </a>
 
-          <div class="searchbar d-flex align-items-center col-5">
+          <div class="searchbar col-12 d-flex align-items-center col-lg-5">
             <div class="input-group searchbar-group">
 
-              <input type="text" class="form-control" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
+              <input type="text" class="form-control search-input" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
 
-              <div class="input-group-btn">
+              <div class="input-group-btn search-category">
                 <select id="phanloaisp" class="input-group btn btn-default dropdown-toggle form-control">
-                  <option value="" selected hidden>Phân loại sản phẩm</option>
+                  <option value="" selected hidden>Phân loại</option>
                   <option value="1">Dược phẩm</option>
                   <option value="2">Thiết bị y tế</option>
                   <option value="3">Mỹ phẩm</option>
@@ -44,25 +46,24 @@
                 <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
               </div>
             </div>
-            <div class="search-btn-bg"></div>
           </div>
 
-          <div class="user col-4 row">
-            <div class="icon col-1 d-flex align-items-center">
+          <div class="user col-5 col-lg-4 row">
+            <div class="icon col-4 col-lg-1 d-flex align-items-center">
               <i class="bx bx-heart"></i>
               <div class="counter d-flex justify-content-center align-items-center">0</div>
             </div>
-            <div class="icon col-1 d-flex align-items-center">
+            <div class="icon col-4 col-lg-1 d-flex align-items-center">
               <i class="bx bx-cart"></i>
               <div class="counter d-flex justify-content-center align-items-center">0</div>
             </div>
-            <div class="user-account col-7 row align-items-center">
-              <div class="icon col-1 d-flex align-items-center mr-2"><i class="bx bx-user"></i></div>
+            <div class="user-account col-3 col-lg-7 row align-items-center">
+              <div class="icon col col-lg-1 d-flex align-items-center mr-2"><i class="bx bx-user"></i></div>
               <div class="user-action col row p-0 m-0">
-                <div class="action-desc col-12">
+                <div class="action-desc col-lg-12">
                   My Account
                 </div>
-                <div class="action-btn col-12">
+                <div class="action-btn col-lg-12">
                   <a href="#" id="login">Đăng nhập/Đăng ký</a>
                 </div>
               </div>
@@ -71,34 +72,46 @@
 
         </div>
 
-        <div class="navbar-bottom col-12 row p-0">
-          <div class="menu-category input-group col-3 p-0">
+        <div class="navbar-bottom col-lg-12 row p-0">
+          <div class="menu-category input-group col-lg-3 p-0">
             <div class="menu input-group-btn" id="hambur">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
               </button>
             </div>
-            <div class="category-ctl input-group-btn col-auto d-flex align-items-center pr-0">
+            <div class="category-ctl input-group-btn col-lg-auto d-flex align-items-center pr-0">
               <div class="mr-4">Danh Mục Sản Phẩm</div>
               <i class="fas fa-angle-down ml-4"></i>
             </div>
           </div>
 
-          <div class="nav-link col-8 p-0 m-0">
+          <div class="nav-link col-lg-8 p-0 m-0">
             <ul class="cow-12 m-0 p-0 d-flex align-items-center" style="height:50px;">
-              <li class="col-auto"><a href="index.html" class="link">Trang Chủ</a></li>
-              <li class="col-auto"><a href="#" class="link">Hoạt Chất</a></li>
-              <li class="col-auto"><a href="#" class="link">Tìm Hiểu Bệnh</a></li>
-              <li class="col-auto"><a href="#" class="link">Về Chúng Tôi</a></li>
-              <li class="col-auto"><a href="#" class="link">Tin Tức</a></li>
-              <li class="col-auto"><a href="#" class="link" id="active">Đặt Hàng Nhanh</a></li>
-              <li class="col-auto"><a href="contact.html" class="link">Liên Hệ</a></li>
+              <li class="col-lg-auto"><a href="index.html" class="link" id="active">Trang Chủ</a></li>
+              <li class="col-lg-auto"><a href="#" class="link">Hoạt Chất</a></li>
+              <li class="col-lg-auto"><a href="#" class="link">Tìm Hiểu Bệnh</a></li>
+              <li class="col-lg-auto"><a href="#" class="link">Về Chúng Tôi</a></li>
+              <li class="col-lg-auto"><a href="#" class="link">Tin Tức</a></li>
+              <li class="col-lg-auto"><a href="order.html" class="link">Đặt Hàng Nhanh</a></li>
+              <li class="col-lg-auto"><a href="contact.html" class="link">Liên Hệ</a></li>
             </ul>
           </div>
         </div>
 
       </div>
-    </div>
+
+      <div class="mobile-menu d-lg-none d-xl-none" id="mobile-nav">
+        <div onclick="showPopup()" class="hamburg col-2 d-flex justify-content-center align-items-center"><i class="fas fa-bars"></i></div>
+        <ul class="menu-items">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#">Hoạt chất</a></li>
+          <li><a href="#">Tìm hiểu bệnh</a></li>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div> 
 
     <div class="container site-pagination p-0">
       <ul class="breadcrumb">

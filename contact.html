@@ -18,20 +18,22 @@
     
     <div class="container page-header">
       <div class="navbar p-0">
-        <div class="navbar-top col-12 row p-0 m-0">
-
-          <a class="navbar-brand col-3" href="index.html">
+        <div class="navbar-top col-12 col-lg-12 d-flex flex-wrap p-0 m-0">
+          <div onclick="showPopup()" class="hamburg col-2 d-flex justify-content-center align-items-center">
+            <i class="fas fa-bars"></i>
+          </div>
+          <a class="navbar-brand col-5 col-lg-3" href="index.html">
             <img src="img/logo.png" />
           </a>
 
-          <div class="searchbar d-flex align-items-center col-5">
+          <div class="searchbar col-12 d-flex align-items-center col-lg-5">
             <div class="input-group searchbar-group">
 
-              <input type="text" class="form-control" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
+              <input type="text" class="form-control search-input" id="searchbarinput" placeholder="Tìm kiếm sản phẩm"/>
 
-              <div class="input-group-btn">
+              <div class="input-group-btn search-category">
                 <select id="phanloaisp" class="input-group btn btn-default dropdown-toggle form-control">
-                  <option value="" selected hidden>Phân loại sản phẩm</option>
+                  <option value="" selected hidden>Phân loại</option>
                   <option value="1">Dược phẩm</option>
                   <option value="2">Thiết bị y tế</option>
                   <option value="3">Mỹ phẩm</option>
@@ -45,25 +47,24 @@
                 <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
               </div>
             </div>
-            <div class="search-btn-bg"></div>
           </div>
 
-          <div class="user col-4 row">
-            <div class="icon col-1 d-flex align-items-center">
+          <div class="user col-5 col-lg-4 row">
+            <div class="icon col-4 col-lg-1 d-flex align-items-center">
               <i class="bx bx-heart"></i>
               <div class="counter d-flex justify-content-center align-items-center">0</div>
             </div>
-            <div class="icon col-1 d-flex align-items-center">
+            <div class="icon col-4 col-lg-1 d-flex align-items-center">
               <i class="bx bx-cart"></i>
               <div class="counter d-flex justify-content-center align-items-center">0</div>
             </div>
-            <div class="user-account col-7 row align-items-center">
-              <div class="icon col-1 d-flex align-items-center mr-2"><i class="bx bx-user"></i></div>
+            <div class="user-account col-3 col-lg-7 row align-items-center">
+              <div class="icon col col-lg-1 d-flex align-items-center mr-2"><i class="bx bx-user"></i></div>
               <div class="user-action col row p-0 m-0">
-                <div class="action-desc col-12">
+                <div class="action-desc col-lg-12">
                   My Account
                 </div>
-                <div class="action-btn col-12">
+                <div class="action-btn col-lg-12">
                   <a href="#" id="login">Đăng nhập/Đăng ký</a>
                 </div>
               </div>
@@ -72,34 +73,46 @@
 
         </div>
 
-        <div class="navbar-bottom col-12 row p-0">
-          <div class="menu-category input-group col-3 p-0">
+        <div class="navbar-bottom col-lg-12 row p-0">
+          <div class="menu-category input-group col-lg-3 p-0">
             <div class="menu input-group-btn" id="hambur">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
               </button>
             </div>
-            <div class="category-ctl input-group-btn col-auto d-flex align-items-center pr-0">
+            <div class="category-ctl input-group-btn col-lg-auto d-flex align-items-center pr-0">
               <div class="mr-4">Danh Mục Sản Phẩm</div>
               <i class="fas fa-angle-down ml-4"></i>
             </div>
           </div>
 
-          <div class="nav-link col-8 p-0 m-0">
+          <div class="nav-link col-lg-8 p-0 m-0">
             <ul class="cow-12 m-0 p-0 d-flex align-items-center" style="height:50px;">
-              <li class="col-auto"><a href="index.html" class="link">Trang Chủ</a></li>
-              <li class="col-auto"><a href="#" class="link">Hoạt Chất</a></li>
-              <li class="col-auto"><a href="#" class="link">Tìm Hiểu Bệnh</a></li>
-              <li class="col-auto"><a href="#" class="link">Về Chúng Tôi</a></li>
-              <li class="col-auto"><a href="#" class="link">Tin Tức</a></li>
-              <li class="col-auto"><a href="order.html" class="link">Đặt Hàng Nhanh</a></li>
-              <li class="col-auto"><a href="#" class="link"  id="active">Liên Hệ</a></li>
+              <li class="col-lg-auto"><a href="index.html" class="link" id="active">Trang Chủ</a></li>
+              <li class="col-lg-auto"><a href="#" class="link">Hoạt Chất</a></li>
+              <li class="col-lg-auto"><a href="#" class="link">Tìm Hiểu Bệnh</a></li>
+              <li class="col-lg-auto"><a href="#" class="link">Về Chúng Tôi</a></li>
+              <li class="col-lg-auto"><a href="#" class="link">Tin Tức</a></li>
+              <li class="col-lg-auto"><a href="order.html" class="link">Đặt Hàng Nhanh</a></li>
+              <li class="col-lg-auto"><a href="#" class="link">Liên Hệ</a></li>
             </ul>
           </div>
         </div>
 
       </div>
-    </div>  
+
+      <div class="mobile-menu d-lg-none d-xl-none" id="mobile-nav">
+        <div onclick="showPopup()" class="hamburg col-2 d-flex justify-content-center align-items-center"><i class="fas fa-bars"></i></div>
+        <ul class="menu-items">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#">Hoạt chất</a></li>
+          <li><a href="#">Tìm hiểu bệnh</a></li>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>   
 
     <div class="container site-pagination p-0">
       <ul class="breadcrumb">
@@ -108,19 +121,19 @@
       </ul>
     </div>
 
-    <div class="container contact-wrapper p-0">
+    <div class="container contact-wrapper">
         <div class="contact-information row m-0">
-            <div class="contact-form col-7 p-0">
-                <div class="contact-tabs tab contact-title col-11 p-0 d-flex">
-                    <div class="tab-title col-auto p-0 active" onclick="changeTab(event, 'thongtin','contact-active')">Thông tin liên lạc
+            <div class="contact-form col-12 col-lg-7 p-0">
+                <div class="contact-tabs tab contact-title col-12 col-lg-11 p-0 d-flex">
+                    <div class="tab-title col-6 col-lg-auto p-0 active" onclick="changeTab(event, 'thongtin','contact-active')">Thông tin liên lạc
                       <div id="contact-active" class="active-line d-flex justify-content-center"><i class="fas fa-sort-up"></i></div>
                     </div>
-                    <div class="tab-title col-auto p-0" onclick="changeTab(event, 'chinhanh','branch-active')">Hệ thống cửa hàng
+                    <div class="tab-title col-6 col-lg-auto p-0" onclick="changeTab(event, 'chinhanh','branch-active')">Hệ thống cửa hàng
                       <div id="branch-active" class="active-line d-flex justify-content-center"><i class="fas fa-sort-up"></i></div>
                     </div>
                 </div>
 
-                <div id="thongtin" class="tabcontent col-11 p-0">
+                <div id="thongtin" class="tabcontent col-lg-11 p-0">
                     <form action="">
                         <div class="form-title">Họ và tên</div>
                         <input class="form-input" type="text" placeholder="Vui lòng nhập họ và tên">
@@ -130,27 +143,27 @@
                         <input class="form-input" type="text" placeholder="Vui lòng nhập địa chỉ email">
                         <div class="form-title">Nội dung liên lạc</div>
                         <textarea id="noidungll" class="form-input" type="text" placeholder="Vui lòng nhập nội dung" row="6"></textarea>
-                        <div class="col-12 d-flex justify-content-end p-0">
+                        <div class="col-lg-12 d-flex justify-content-end p-0">
                           <button class="form-button">GỬI NỘI DUNG</button>
                         </div>
                     </form>
                   </div>
                   
-                  <div id="chinhanh" class="tabcontent col-11 p-0" style="display:none;">
+                  <div id="chinhanh" class="tabcontent col-lg-11 p-0" style="display:none;">
                     <div class="ggmap-wrapper">
                       <a targer="_blank" href="https://goo.gl/maps/bWAEyg8zZmNQQZ8KA"><img src="img/map.png" alt=""></a>
                     </div>
                   </div>                  
 
             </div>
-            <div class="getintouch col-5 m-0">
+            <div class="getintouch col-12 col-lg-5">
                 <div class="contact-title row m-0">
-                  <div class="contact-us col-auto p-0">Liên hệ với chúng tôi
+                  <div class="contact-us col-lg-auto p-0">Liên hệ với chúng tôi
                     <div class="git-active-line d-flex justify-content-center"><i class="fas fa-sort-up"></i></div>
                   </div>
-                  <div class="col"></div>
+                  <div class="col-lg"></div>
                 </div>
-                <div class="getintouch-info col-8 p-0">
+                <div class="getintouch-info col-lg-8 p-0">
                     <p class="d-flex align-items-center"><i class='bx bx-time-five'></i>Every day a week & 24/7</p>
                     <p class="d-flex align-items-center"><i class='bx bx-phone'></i>0909 669 420</p>
                     <p class="d-flex align-items-center"><i class='bx bx-envelope'></i>Thuocchosi@gmail.com</p>
@@ -172,58 +185,62 @@
           </div>
         </div>
     </div>
+
     <footer>
-        <div class="container">
-          <div class="footer-content row m-0">
-            <div class="footer-logo col-3 p-0">
-              <div class="logo-wrapper">
-                <img src="img/logonotext.png" alt="">
-              </div>
-              THUỐC CHỢ SỈ
+      <div class="container">
+        <div class="footer-content row m-0">
+          <div class="footer-logo col-lg-3 p-0">
+            <div class="logo-wrapper">
+              <img src="img/logonotext.png" alt="">
             </div>
-            <div class="footer-info col-9 p-0">
-              <div class="footer-contact">
-                <div class="footer-col-title">Thông tin liên hệ</div>
-                <ul id="contact">
-                  <li class="action-clipboard">0909 669 420</li>
-                  <li class="action-clipboard">Thuocchosi@gmail.com</li>
-                  <li>Về chúng tôi</li>
-                  <li>Công Ty TNHH Thương Mại XYZ</li>
-                  <li>Địa chỉ: 48 Nguyễn Văn Quá, phường 3, Quận Gò Vấp, Tp HCM.</li>
-                </ul>
-              </div>
-              <div class="footer-pp">
-                <div class="footer-col-title">Chính sách và bảo mật</div>
-                <ul id="contact">
-                  <li>FAQS</li>
-                  <li>Điều khoản sử dụng</li>
-                  <li>Chính sách giao hàng</li>
-                  <li>Chính sách hoàn trả</li>
-                  <li>Chính sách bảo mật</li>
-                  <li>Chính sách người dùng</li>
-                  <li>Theo dõi đơn hàng</li>
-                </ul>
-              </div>
-              <div class="footer-paymethod">
-                <div class="footer-col-title">Phương thức thanh toán</div>
-                <div class="methods d-flex flex-wrap">
-                  <div id="visa" class="method d-flex justify-content-center align-items-center">
-                    <img src="img/visa.png" alt="visa">
-                  </div>
-                  <div id="mastercard" class="method d-flex justify-content-center align-items-center">
-                    <img src="img/mastercard.png" alt="mastercard">
-                  </div>
-                  <div id="gpay" class="method d-flex justify-content-center align-items-center">
-                    <img src="img/gpay.png" alt="gpay">
-                  </div>
-                  <div id="paypal" class="method d-flex justify-content-center align-items-center">
-                    <img src="img/paypal.png" alt="paypal">
-                  </div>
+            THUỐC CHỢ SỈ
+          </div>
+          <div class="footer-info col-lg-9 p-0 d-flex">
+            <div class="footer-contact col p-0">
+              <div class="footer-col-title">Thông tin liên hệ</div>
+              <ul id="contact">
+                <li class="action-clipboard">0909 669 420</li>
+                <li class="action-clipboard">Thuocchosi@gmail.com</li>
+                <li>Về chúng tôi</li>
+                <li>Công Ty TNHH Thương Mại XYZ</li>
+                <li>Địa chỉ: 48 Nguyễn Văn Quá, phường 3, Quận Gò Vấp, Tp HCM.</li>
+              </ul>
+            </div>
+            <div class="footer-pp col p-0">
+              <div class="footer-col-title">Chính sách và bảo mật</div>
+              <ul id="pp">
+                <li>FAQS</li>
+                <li>Điều khoản sử dụng</li>
+                <li>Chính sách giao hàng</li>
+                <li>Chính sách hoàn trả</li>
+                <li>Chính sách bảo mật</li>
+                <li>Chính sách người dùng</li>
+                <li>Theo dõi đơn hàng</li>
+              </ul>
+            </div>
+            <div class="footer-paymethod col p-0">
+              <div class="footer-col-title">Phương thức thanh toán</div>
+              <div class="methods d-flex flex-wrap">
+                <div id="visa" class="method d-flex justify-content-center align-items-center">
+                  <img src="img/visa.png" alt="visa">
                 </div>
+                <div id="mastercard" class="method d-flex justify-content-center align-items-center">
+                  <img src="img/mastercard.png" alt="mastercard">
+                </div>
+                <div id="gpay" class="method d-flex justify-content-center align-items-center">
+                  <img src="img/gpay.png" alt="gpay">
+                </div>
+                <div id="paypal" class="method d-flex justify-content-center align-items-center">
+                  <img src="img/paypal.png" alt="paypal">
+                </div>
+              </div>
+              <div class="footer-mb-logo">
+                <img src="img/logo.png" alt="">
               </div>
             </div>
           </div>
         </div>
+      </div>
     </footer>
 
     <!-- Optional JavaScript -->

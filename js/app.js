@@ -167,3 +167,7 @@ function showImage(event) {
           document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
       }, 0)
   }());
+
+  function showPopup() {
+    document.getElementById("mobile-nav").classList.toggle("show");
+  }

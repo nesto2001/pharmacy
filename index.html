@@ -15,8 +15,10 @@
     <div class="container page-header">
       <div class="navbar p-0">
         <div class="navbar-top col-12 col-lg-12 d-flex flex-wrap p-0 m-0">
-          <div class="hamburg col-2 d-flex justify-content-center align-items-center"><i class="fas fa-bars"></i></div>
-          <a class="navbar-brand col-5 col-lg-3" href="#">
+          <div onclick="showPopup()" class="hamburg col-2 d-flex justify-content-center align-items-center">
+            <i class="fas fa-bars"></i>
+          </div>
+          <a class="navbar-brand col-5 col-lg-3" href="index.html">
             <img src="img/logo.png" />
           </a>
 
@@ -94,56 +96,69 @@
         </div>
 
       </div>
+
+      <div class="mobile-menu d-lg-none d-xl-none" id="mobile-nav">
+        <div onclick="showPopup()" class="hamburg col-2 d-flex justify-content-center align-items-center"><i class="fas fa-bars"></i></div>
+        <ul class="menu-items">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#">Hoạt chất</a></li>
+          <li><a href="#">Tìm hiểu bệnh</a></li>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
     </div>  
     
-    <div class="container banner d-flex p-0">
-      <div class="banner-desc col-2 col-lg-2 p-0">
-        <div class="banner-title"><p class="m-0">HỖ TRỢ, PHÒNG CHỐNG</p><p class="covid m-0">COVID 19</p><p>CÙNG CHỢ THUỐC SỈ</p></div>
-        <input class="banner-btn" type="button" value="KHÁM PHÁ THÊM">
-        <div class="plus" style="bottom:260px; left:45px;">
-          <div class="x-line"></div>
-          <div class="y-line"></div>
+    <div class="container banner p-0">
+      <div class="banner-wrapper d-flex">
+        <div class="banner-desc col-1 col-lg-3 p-0">
+          <div class="banner-title"><p class="m-0">HỖ TRỢ, PHÒNG CHỐNG</p><p class="covid m-0">COVID 19</p><p>CÙNG CHỢ THUỐC SỈ</p></div>
+          <input class="banner-btn" type="button" value="KHÁM PHÁ THÊM">
+          <div class="plus" style="bottom:260px; left:45px;">
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+          </div>
+          <div class="plus small" style="bottom:230px; left:95px;">
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+          </div>
+          <div class="plus small" style="bottom:210px; left:56px;">
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+          </div>
+          <div class="plus" style="bottom:160px; left:10px;">
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+          </div>
+          <div class="plus" style="bottom:138px; left:60px;">
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+          </div>
+          <div class="plus small" style="bottom:115px; left:30px;">
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+          </div>
+          <div class="plus" style="bottom:85px; left:80px;">
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+          </div>
+          <div class="plus small" style="bottom:60px; left:55px;">
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+          </div>
+          <div class="plus" style="bottom:10px; left:25px;">
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+          </div>
         </div>
-        <div class="plus small" style="bottom:230px; left:95px;">
-          <div class="x-line"></div>
-          <div class="y-line"></div>
+        <div class="banner-img col-10 col-lg-9 pr-0 ml-lg-4 pr-lg-0">
+          <div class="circle"></div>
+          <img class="virus" src="img/virus.png" alt="virus" style="top: 270px; left: 38px">
+          <img class="virus" src="img/virus.png" alt="virus" style="top:132px; left:190px">
+          <img class="banner-pdt" src="img/ruatay.png" alt="nuoc rua tay" style="top: 155px; left:85px">
+          <img class="bannerqc" src="img/banner.png" alt="quangcao">
         </div>
-        <div class="plus small" style="bottom:210px; left:56px;">
-          <div class="x-line"></div>
-          <div class="y-line"></div>
-        </div>
-        <div class="plus" style="bottom:160px; left:10px;">
-          <div class="x-line"></div>
-          <div class="y-line"></div>
-        </div>
-        <div class="plus" style="bottom:138px; left:60px;">
-          <div class="x-line"></div>
-          <div class="y-line"></div>
-        </div>
-        <div class="plus small" style="bottom:115px; left:30px;">
-          <div class="x-line"></div>
-          <div class="y-line"></div>
-        </div>
-        <div class="plus" style="bottom:85px; left:80px;">
-          <div class="x-line"></div>
-          <div class="y-line"></div>
-        </div>
-        <div class="plus small" style="bottom:60px; left:55px;">
-          <div class="x-line"></div>
-          <div class="y-line"></div>
-        </div>
-        <div class="plus" style="bottom:10px; left:25px;">
-          <div class="x-line"></div>
-          <div class="y-line"></div>
-        </div>
-      </div>
-      <div class="col-lg-1"></div>
-      <div class="banner-img col-10 col-lg-9 ml-4 pr-0">
-        <div class="circle"></div>
-        <img class="virus" src="img/virus.png" alt="virus" style="top: 270px; left: 38px">
-        <img class="virus" src="img/virus.png" alt="virus" style="top:132px; left:190px">
-        <img class="banner-pdt" src="img/ruatay.png" alt="nuoc rua tay" style="top: 155px; left:85px">
-        <img class="bannerqc" src="img/banner.png" alt="quangcao">
       </div>
     </div>
 
