@@ -1676,7 +1676,7 @@ textarea:focus{
     }
     .ft-text p:first-child{
         height: 1.2em !important;
-        font-size: 0.7em !important;
+        font-size: 0.6em !important;
         line-height: 1em;
     }
 
